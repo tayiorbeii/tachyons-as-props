@@ -1,4 +1,225 @@
-.border-box { box-sizing: border-box; }
+/* Dependencies */
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+html { font-family: sans-serif; /* 1 */ line-height: 1.15; /* 2 */ -ms-text-size-adjust: 100%; /* 3 */ -webkit-text-size-adjust: 100%; /* 3 */ }
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body { margin: 0; }
+/**
+ * Add the correct display in IE 9-.
+ */
+article, aside, footer, header, nav, section { display: block; }
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 { font-size: 2em; margin: .67em 0; }
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption, figure, main {/* 1 */ display: block; }
+/**
+ * Add the correct margin in IE 8.
+ */
+figure { margin: 1em 40px; }
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr { box-sizing: content-box; /* 1 */ height: 0; /* 1 */ overflow: visible; /* 2 */ }
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ }
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a { background-color: transparent; /* 1 */ -webkit-text-decoration-skip: objects; /* 2 */ }
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active, a:hover { outline-width: 0; }
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] { border-bottom: none; /* 1 */ text-decoration: underline; /* 2 */ text-decoration: underline dotted; /* 2 */ }
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b, strong { font-weight: inherit; }
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b, strong { font-weight: bolder; }
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code, kbd, samp { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ }
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn { font-style: italic; }
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark { background-color: #ff0; color: #000; }
+/**
+ * Add the correct font size in all browsers.
+ */
+small { font-size: 80%; }
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio, video { display: inline-block; }
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) { display: none; height: 0; }
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img { border-style: none; }
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) { overflow: hidden; }
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button, input, optgroup, select, textarea { font-family: sans-serif; /* 1 */ font-size: 100%; /* 1 */ line-height: 1.15; /* 1 */ margin: 0; /* 2 */ }
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button, input {/* 1 */ overflow: visible; }
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button, select {/* 1 */ text-transform: none; }
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button, html [type="button"], /* 1 */
+[type="reset"], [type="submit"] { -webkit-appearance: button; /* 2 */ }
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { border-style: none; padding: 0; }
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring, [type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring { outline: 1px dotted ButtonText; }
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: .35em .625em .75em; }
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend { box-sizing: border-box; /* 1 */ color: inherit; /* 2 */ display: table; /* 1 */ max-width: 100%; /* 1 */ padding: 0; /* 3 */ white-space: normal; /* 1 */ }
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress { display: inline-block; /* 1 */ vertical-align: baseline; /* 2 */ }
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea { overflow: auto; }
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"], [type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button { height: auto; }
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] { -webkit-appearance: textfield; /* 1 */ outline-offset: -2px; /* 2 */ }
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button { -webkit-appearance: button; /* 1 */ font: inherit; /* 2 */ }
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details, /* 1 */
+menu { display: block; }
+/*
+ * Add the correct display in all browsers.
+ */
+summary { display: list-item; }
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas { display: inline-block; }
+/**
+ * Add the correct display in IE.
+ */
+template { display: none; }
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] { display: none; }
+/* Default Tachyons */
 /*
 
    ASPECT RATIOS
@@ -31,31 +252,6 @@
 .aspect-ratio--object { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 100; }
 /*
 
-   IMAGES
-   Docs: http://tachyons.io/docs/elements/images/
-
-*/
-/* Responsive images! */
-img { max-width: 100%; }
-/*
-
-   BACKGROUND SIZE
-   Docs: http://tachyons.io/docs/themes/background-size/
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
-
-*/
-/*
-  Often used in combination with background image set as an inline style
-  on an html element.
-*/
-.cover { background-size: cover !important; }
-.contain { background-size: contain !important; }
-/*
-
     BACKGROUND POSITION
 
     Base:
@@ -81,7 +277,7 @@ img { max-width: 100%; }
 .bg-left { background-repeat: no-repeat; background-position: center left; }
 /*
 
-   OUTLINES
+   BACKGROUND SIZE
 
    Media Query Extensions:
      -ns = not-small
@@ -89,122 +285,24 @@ img { max-width: 100%; }
      -l  = large
 
 */
-.outline { outline: 1px solid; }
-.outline-transparent { outline: 1px solid transparent; }
-.outline-0 { outline: 0; }
 /*
-
-    BORDERS
-    Docs: http://tachyons.io/docs/themes/borders/
-
-    Base:
-      b = border
-
-    Modifiers:
-      a = all
-      t = top
-      r = right
-      b = bottom
-      l = left
-      n = none
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
-
+  Often used in combination with background image set as an inline style
+  on an html element.
 */
-.ba { border-style: solid; border-width: 1px; }
-.bt { border-top-style: solid; border-top-width: 1px; }
-.br { border-right-style: solid; border-right-width: 1px; }
-.bb { border-bottom-style: solid; border-bottom-width: 1px; }
-.bl { border-left-style: solid; border-left-width: 1px; }
-.bn { border-style: none; border-width: 0; }
+.cover { background-size: cover; }
+.contain { background-size: contain; }
 /*
-
-   BORDER COLORS
-   Docs: http://tachyons.io/docs/themes/borders/
-
-   Border colors can be used to extend the base
-   border classes ba,bt,bb,br,bl found in the _borders.css file.
-
-   The base border class by default will set the color of the border
-   to that of the current text color. These classes are for the cases
-   where you desire for the text and border colors to be different.
-
-   Base:
-     b = border
-
-   Modifiers:
-   --color-name = each color variable name is also a border color name
-
+  BASE EGGHEAD OVERRIDE
 */
-.b--black { border-color: #000; }
-.b--near-black { border-color: #111; }
-.b--dark-gray { border-color: #333; }
-.b--mid-gray { border-color: #555; }
-.b--gray { border-color: #777; }
-.b--silver { border-color: #999; }
-.b--light-silver { border-color: #aaa; }
-.b--moon-gray { border-color: #ccc; }
-.b--light-gray { border-color: #eee; }
-.b--near-white { border-color: #f4f4f4; }
-.b--white { border-color: #fff; }
-.b--white-90 { border-color: rgba( 255, 255, 255, .9 ); }
-.b--white-80 { border-color: rgba( 255, 255, 255, .8 ); }
-.b--white-70 { border-color: rgba( 255, 255, 255, .7 ); }
-.b--white-60 { border-color: rgba( 255, 255, 255, .6 ); }
-.b--white-50 { border-color: rgba( 255, 255, 255, .5 ); }
-.b--white-40 { border-color: rgba( 255, 255, 255, .4 ); }
-.b--white-30 { border-color: rgba( 255, 255, 255, .3 ); }
-.b--white-20 { border-color: rgba( 255, 255, 255, .2 ); }
-.b--white-10 { border-color: rgba( 255, 255, 255, .1 ); }
-.b--white-05 { border-color: rgba( 255, 255, 255, .05 ); }
-.b--white-025 { border-color: rgba( 255, 255, 255, .025 ); }
-.b--white-0125 { border-color: rgba( 255, 255, 255, .0125 ); }
-.b--black-90 { border-color: rgba( 0, 0, 0, .9 ); }
-.b--black-80 { border-color: rgba( 0, 0, 0, .8 ); }
-.b--black-70 { border-color: rgba( 0, 0, 0, .7 ); }
-.b--black-60 { border-color: rgba( 0, 0, 0, .6 ); }
-.b--black-50 { border-color: rgba( 0, 0, 0, .5 ); }
-.b--black-40 { border-color: rgba( 0, 0, 0, .4 ); }
-.b--black-30 { border-color: rgba( 0, 0, 0, .3 ); }
-.b--black-20 { border-color: rgba( 0, 0, 0, .2 ); }
-.b--black-10 { border-color: rgba( 0, 0, 0, .1 ); }
-.b--black-05 { border-color: rgba( 0, 0, 0, .05 ); }
-.b--black-025 { border-color: rgba( 0, 0, 0, .025 ); }
-.b--black-0125 { border-color: rgba( 0, 0, 0, .0125 ); }
-.b--dark-red { border-color: #e7040f; }
-.b--red { border-color: #ff4136; }
-.b--light-red { border-color: #ff725c; }
-.b--orange { border-color: #ff6300; }
-.b--gold { border-color: #ffb700; }
-.b--yellow { border-color: #ffd700; }
-.b--light-yellow { border-color: #fbf1a9; }
-.b--purple { border-color: #5e2ca5; }
-.b--light-purple { border-color: #a463f2; }
-.b--dark-pink { border-color: #d5008f; }
-.b--hot-pink { border-color: #ff41b4; }
-.b--pink { border-color: #ff80cc; }
-.b--light-pink { border-color: #ffa3d7; }
-.b--dark-green { border-color: #137752; }
-.b--green { border-color: #19a974; }
-.b--light-green { border-color: #9eebcf; }
-.b--navy { border-color: #001b44; }
-.b--dark-blue { border-color: #00449e; }
-.b--blue { border-color: #357edd; }
-.b--light-blue { border-color: #96ccff; }
-.b--lightest-blue { border-color: #cdecff; }
-.b--washed-blue { border-color: #f6fffe; }
-.b--washed-green { border-color: #e8fdf5; }
-.b--washed-yellow { border-color: #fffceb; }
-.b--washed-red { border-color: #ffdfdf; }
-.b--transparent { border-color: transparent; }
-.b--inherit { border-color: inherit; }
+html, body { height: 100%; }
+html { box-sizing: border-box; /* border-box */ }
+*, *:before, *:after { box-sizing: inherit; }
+body { min-height: 100vh; /* min-vh-100 */ margin: 0; /* ma0 */ background: #232c3b; /* base */ color: #63768d; /* dark-gray */ font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif; /* sans-serif */ }
+a { color: #4786ff; /* blue */ }
+code { color: #59cd90; /* green */ }
 /*
 
    BORDER RADIUS
-   Docs: http://tachyons.io/docs/themes/border-radius/
 
    Base:
      br   = border-radius
@@ -215,10 +313,9 @@ img { max-width: 100%; }
      2    = 2nd step in scale
      3    = 3rd step in scale
      4    = 4th step in scale
-
-   Literal values:
      -100 = 100%
      -pill = 9999px
+
 
    Media Query Extensions:
      -ns = not-small
@@ -240,18 +337,15 @@ img { max-width: 100%; }
 /*
 
    BORDER STYLES
-   Docs: http://tachyons.io/docs/themes/borders/
-
-   Depends on base border module in _borders.css
 
    Base:
-     b = border-style
+     bs = border-style
 
    Modifiers:
-     --none   = none
-     --dotted = dotted
-     --dashed = dashed
-     --solid  = solid
+     none   = none
+     dotted = dotted
+     dashed = dashed
+     solid  = solid
 
    Media Query Extensions:
      -ns = not-small
@@ -266,7 +360,6 @@ img { max-width: 100%; }
 /*
 
    BORDER WIDTHS
-   Docs: http://tachyons.io/docs/themes/borders/
 
    Base:
      bw = border-width
@@ -291,57 +384,59 @@ img { max-width: 100%; }
 .bw3 { border-width: .5rem; }
 .bw4 { border-width: 1rem; }
 .bw5 { border-width: 2rem; }
-/* Resets */
 .bt-0 { border-top-width: 0; }
 .br-0 { border-right-width: 0; }
 .bb-0 { border-bottom-width: 0; }
 .bl-0 { border-left-width: 0; }
 /*
 
-  BOX-SHADOW
-  Docs: http://tachyons.io/docs/themes/box-shadow/
+   BORDER BASE
 
-  Media Query Extensions:
-   -ns = not-small
-   -m  = medium
-   -l  = large
+   Legend
 
- */
-.shadow-1 { box-shadow: 0 0 4px 2px rgba( 0, 0, 0, .2 ); }
-.shadow-2 { box-shadow: 0 0 8px 2px rgba( 0, 0, 0, .2 ); }
-.shadow-3 { box-shadow: 2px 2px 4px 2px rgba( 0, 0, 0, .2 ); }
-.shadow-4 { box-shadow: 2px 2px 8px 0 rgba( 0, 0, 0, .2 ); }
-.shadow-5 { box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .2 ); }
+   a = all
+   t = top
+   r = right
+   b = bottom
+   l = left
+
+*/
+.ba { border-style: solid; border-width: 1px; }
+.bt { border-top-style: solid; border-top-width: 1px; }
+.br { border-right-style: solid; border-right-width: 1px; }
+.bb { border-bottom-style: solid; border-bottom-width: 1px; }
+.bl { border-left-style: solid; border-left-width: 1px; }
+.bn { border-style: none; border-width: 0; }
+/*
+  Box Sizing
+*/
+html, body, div, article, section, main, footer, header, form, fieldset, legend,
+pre, code, p, a, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, textarea,
+input[type="email"], input[type="number"], input[type="password"],
+input[type="tel"], input[type="text"], input[type="url"], .border-box { box-sizing: border-box; }
 /*
 
-   CODE
+   CLEARFIX
 
+*/
+/* Nicolas Gallaghers Clearfix solution
+   Ref: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before, .cf:after { content: " "; display: table; }
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+.cl { clear: left; }
+.cr { clear: right; }
+.cb { clear: both; }
+.cn { clear: none; }
+/*
+   CODE
 */
 .pre { overflow-x: auto; overflow-y: hidden; overflow: scroll; }
 /*
 
    COORDINATES
-   Docs: http://tachyons.io/docs/layout/position/
 
    Use in combination with the position module.
-
-   Base:
-     top
-     bottom
-     right
-     left
-
-   Modifiers:
-     -0  = literal value 0
-     -1  = literal value 1
-     -2  = literal value 2
-     --1 = literal value -1
-     --2 = literal value -2
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
 
 */
 .top-0 { top: 0; }
@@ -367,23 +462,7 @@ img { max-width: 100%; }
 .absolute--fill { top: 0; right: 0; bottom: 0; left: 0; }
 /*
 
-   CLEARFIX
-   http://tachyons.io/docs/layout/clearfix/
-
-*/
-/* Nicolas Gallaghers Clearfix solution
-   Ref: http://nicolasgallagher.com/micro-clearfix-hack/ */
-.cf:before, .cf:after { content: " "; display: table; }
-.cf:after { clear: both; }
-.cf { *zoom: 1; }
-.cl { clear: left; }
-.cr { clear: right; }
-.cb { clear: both; }
-.cn { clear: none; }
-/*
-
    DISPLAY
-   Docs: http://tachyons.io/docs/layout/display
 
    Base:
     d = display
@@ -395,9 +474,9 @@ img { max-width: 100%; }
     it    = inline-table
     t     = table
     tc    = table-cell
-    t-row          = table-row
-    t-columm       = table-column
-    t-column-group = table-column-group
+    tr    = table-row
+    tcol  = table-column
+    tcolg = table-column-group
 
    Media Query Extensions:
      -ns = not-small
@@ -421,64 +500,10 @@ img { max-width: 100%; }
   all cells will be equal width
 */
 .dt--fixed { table-layout: fixed; width: 100%; }
-/*
-
-  FLEXBOX
-
-  Media Query Extensions:
-   -ns = not-small
-   -m  = medium
-   -l  = large
-
-*/
-.flex { display: -webkit-box; display: -ms-flexbox; display: flex; }
-.inline-flex { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; }
-/* 1. Fix for Chrome 44 bug.
- * https://code.google.com/p/chromium/issues/detail?id=506893 */
-.flex-auto { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; min-width: 0; /* 1 */ min-height: 0; /* 1 */ }
-.flex-none { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
-.flex-column { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
-.flex-row { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
-.flex-wrap { -ms-flex-wrap: wrap; flex-wrap: wrap; }
-.flex-nowrap { -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
-.flex-wrap-reverse { -ms-flex-wrap: wrap-reverse; flex-wrap: wrap-reverse; }
-.flex-column-reverse { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
-.flex-row-reverse { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
-.items-start { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
-.items-end { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
-.items-center { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
-.items-baseline { -webkit-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; }
-.items-stretch { -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
-.self-start { -ms-flex-item-align: start; align-self: flex-start; }
-.self-end { -ms-flex-item-align: end; align-self: flex-end; }
-.self-center { -ms-flex-item-align: center; -ms-grid-row-align: center; align-self: center; }
-.self-baseline { -ms-flex-item-align: baseline; align-self: baseline; }
-.self-stretch { -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; align-self: stretch; }
-.justify-start { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; }
-.justify-end { -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
-.justify-center { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
-.justify-between { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
-.justify-around { -ms-flex-pack: distribute; justify-content: space-around; }
-.content-start { -ms-flex-line-pack: start; align-content: flex-start; }
-.content-end { -ms-flex-line-pack: end; align-content: flex-end; }
-.content-center { -ms-flex-line-pack: center; align-content: center; }
-.content-between { -ms-flex-line-pack: justify; align-content: space-between; }
-.content-around { -ms-flex-line-pack: distribute; align-content: space-around; }
-.content-stretch { -ms-flex-line-pack: stretch; align-content: stretch; }
-.order-0 { -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; }
-.order-1 { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
-.order-2 { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
-.order-3 { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
-.order-4 { -webkit-box-ordinal-group: 5; -ms-flex-order: 4; order: 4; }
-.order-5 { -webkit-box-ordinal-group: 6; -ms-flex-order: 5; order: 5; }
-.order-6 { -webkit-box-ordinal-group: 7; -ms-flex-order: 6; order: 6; }
-.order-7 { -webkit-box-ordinal-group: 8; -ms-flex-order: 7; order: 7; }
-.order-8 { -webkit-box-ordinal-group: 9; -ms-flex-order: 8; order: 8; }
-.order-last { -webkit-box-ordinal-group: 100000; -ms-flex-order: 99999; order: 99999; }
+/* Media Query Variables */
 /*
 
    FLOATS
-   http://tachyons.io/docs/layout/floats/
 
    1. Floated elements are automatically rendered as block level elements.
       Setting floats to display inline will fix the double margin bug in
@@ -509,7 +534,7 @@ img { max-width: 100%; }
    Docs: http://tachyons.io/docs/typography/font-family/
 
 */
-.sans-serif { font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif; }
+.sans-serif { font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif; }
 .serif { font-family: georgia, times, serif; }
 .system-sans-serif { font-family: sans-serif; }
 .system-serif { font-family: serif; }
@@ -531,12 +556,6 @@ code, .code { font-family: Consolas, monaco, monospace; }
 /*
 
    FONT STYLE
-   Docs: http://tachyons.io/docs/typography/font-style/
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
 
 */
 .i { font-style: italic; }
@@ -544,26 +563,6 @@ code, .code { font-family: Consolas, monaco, monospace; }
 /*
 
    FONT WEIGHT
-   Docs: http://tachyons.io/docs/typography/font-weight/
-
-   Base
-     fw = font-weight
-
-   Modifiers:
-     1 = literal value 100
-     2 = literal value 200
-     3 = literal value 300
-     4 = literal value 400
-     5 = literal value 500
-     6 = literal value 600
-     7 = literal value 700
-     8 = literal value 800
-     9 = literal value 900
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
 
 */
 .normal { font-weight: normal; }
@@ -639,13 +638,73 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .h-inherit { height: inherit; }
 /*
 
-   LETTER SPACING
-   Docs: http://tachyons.io/docs/typography/tracking/
+  HOVER EFFECTS
+  Docs: http://tachyons.io/docs/themes/hovers/
 
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
+    - Dim
+    - Hide Child
+    - Underline text
+    - Grow
+    - Pointer
+    - Shadow
+
+*/
+/*
+
+  Dim element on hover by adding the dim class.
+
+*/
+.dim { opacity: 1; -webkit-transition: opacity .15s ease-in; transition: opacity .15s ease-in; }
+.dim:hover, .dim:focus { opacity: .5; -webkit-transition: opacity .15s ease-in; transition: opacity .15s ease-in; }
+.dim:active { opacity: .8; -webkit-transition: opacity .15s ease-out; transition: opacity .15s ease-out; }
+/*
+
+  Hide child & reveal on hover:
+
+  Put the hide-child class on a parent element and any nested element with the
+  child class will be hidden and displayed on hover or focus.
+
+  <div class="hide-child">
+    <div class="child"> Hidden until hover or focus </div>
+    <div class="child"> Hidden until hover or focus </div>
+    <div class="child"> Hidden until hover or focus </div>
+    <div class="child"> Hidden until hover or focus </div>
+  </div>
+*/
+.hide-child .child { opacity: 0; -webkit-transition: opacity .15s ease-in; transition: opacity .15s ease-in; }
+.hide-child:hover  .child, .hide-child:focus  .child, .hide-child:active .child { opacity: 1; -webkit-transition: opacity .15s ease-in; transition: opacity .15s ease-in; }
+.underline-hover:hover, .underline-hover:focus { text-decoration: underline; }
+/* Can combine this with overflow-hidden to make background images grow on hover
+ * even if you are using background-size: cover */
+.grow { -moz-osx-font-smoothing: grayscale; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translateZ( 0 ); transform: translateZ( 0 ); -webkit-transition: -webkit-transform .25s ease-out; transition: -webkit-transform .25s ease-out; transition: transform .25s ease-out; transition: transform .25s ease-out, -webkit-transform .25s ease-out; }
+.grow:hover, .grow:focus { -webkit-transform: scale( 1.05 ); transform: scale( 1.05 ); }
+.grow:active { -webkit-transform: scale( .90 ); transform: scale( .90 ); }
+.grow-large { -moz-osx-font-smoothing: grayscale; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translateZ( 0 ); transform: translateZ( 0 ); -webkit-transition: -webkit-transform .25s ease-in-out; transition: -webkit-transform .25s ease-in-out; transition: transform .25s ease-in-out; transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out; }
+.grow-large:hover, .grow-large:focus { -webkit-transform: scale( 1.2 ); transform: scale( 1.2 ); }
+.grow-large:active { -webkit-transform: scale( .95 ); transform: scale( .95 ); }
+/* Add pointer on hover */
+.pointer:hover { cursor: pointer; }
+/* 
+   Add shadow on hover.
+
+   Performant box-shadow animation pattern from 
+   http://tobiasahlin.com/blog/how-to-animate-box-shadow/ 
+*/
+.shadow-hover::after { box-shadow: 0 0 8px 2px rgba( 0, 0, 0, .2 ); opacity: 0; -webkit-transition: opacity .25s ease-in-out; transition: opacity .25s ease-in-out; }
+.shadow-hover:hover::after, .shadow-hover:focus::after { opacity: 1; }
+/* Combine with classes in skins and skins-pseudo for 
+ * thousands of different transition possibilities. */
+.bg-animate, .bg-animate:hover, .bg-animate:focus { -webkit-transition: background-color .15s ease-in-out; transition: background-color .15s ease-in-out; }
+/*
+
+   IMAGES
+
+*/
+/* Responsive images! */
+img { max-width: 100%; }
+/*
+
+   LETTER SPACING
 
 */
 .tracked { letter-spacing: .1em; }
@@ -668,49 +727,22 @@ code, .code { font-family: Consolas, monaco, monospace; }
 /*
 
    LINKS
-   Docs: http://tachyons.io/docs/elements/links/
 
 */
-.link { text-decoration: none; transition: color .15s ease-in; }
-.link:link, .link:visited { transition: color .15s ease-in; }
-.link:hover { transition: color .15s ease-in; }
-.link:active { transition: color .15s ease-in; }
-.link:focus { transition: color .15s ease-in; outline: 1px dotted currentColor; }
+.link { text-decoration: none; -webkit-transition: color .15s ease-in; transition: color .15s ease-in; }
+.link:link, .link:visited { -webkit-transition: color .15s ease-in; transition: color .15s ease-in; }
+.link:hover { -webkit-transition: color .15s ease-in; transition: color .15s ease-in; }
+.link:active { -webkit-transition: color .15s ease-in; transition: color .15s ease-in; }
+.link:focus { -webkit-transition: color .15s ease-in; transition: color .15s ease-in; }
 /*
 
    LISTS
-   http://tachyons.io/docs/elements/lists/
 
 */
 .list { list-style-type: none; }
 /*
 
    MAX WIDTHS
-   Docs: http://tachyons.io/docs/layout/max-widths/
-
-   Base:
-     mw = max-width
-
-   Modifiers
-     1 = 1st step in width scale
-     2 = 2nd step in width scale
-     3 = 3rd step in width scale
-     4 = 4th step in width scale
-     5 = 5th step in width scale
-     6 = 6st step in width scale
-     7 = 7nd step in width scale
-     8 = 8rd step in width scale
-     9 = 9th step in width scale
-
-     -100 = literal value 100%
-
-     -none  = string value none
-
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
 
 */
 /* Max Width Percentages */
@@ -727,107 +759,86 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .mw9 { max-width: 96rem; }
 /* Max Width String Properties */
 .mw-none { max-width: none; }
+/* Variables */
+/* Spacing Scale - based on a ratio of 1:2 */
+/* Media Queries */
 /*
+   SPACING
 
-   WIDTHS
-   Docs: http://tachyons.io/docs/layout/widths/
+   An eight step powers of two scale ranging from 0 to 16rem.
+   Namespaces are composable and thus highly grockable - check the legend below
 
-   Base:
-     w = width
+   Legend:
 
-   Modifiers
-     1 = 1st step in width scale
-     2 = 2nd step in width scale
-     3 = 3rd step in width scale
-     4 = 4th step in width scale
-     5 = 5th step in width scale
+   p = padding
+   m = margin
 
-     -10  = literal value 10%
-     -20  = literal value 20%
-     -25  = literal value 25%
-     -30  = literal value 30%
-     -33  = literal value 33%
-     -34  = literal value 34%
-     -40  = literal value 40%
-     -50  = literal value 50%
-     -60  = literal value 60%
-     -70  = literal value 70%
-     -75  = literal value 75%
-     -80  = literal value 80%
-     -90  = literal value 90%
-     -100 = literal value 100%
+   a = all
+   h = horizontal
+   v = vertical
+   t = top
+   r = right
+   b = bottom
+   l = left
 
-     -third      = 100% / 3 (Not supported in opera mini or IE8)
-     -two-thirds = 100% / 1.5 (Not supported in opera mini or IE8)
-     -auto       = string value auto
-
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
+   1 = 1st step in spacing scale
+   2 = 2nd step in spacing scale
+   3 = 3rd step in spacing scale
+   4 = 4th step in spacing scale
+   5 = 5th step in spacing scale
+   6 = 6th step in spacing scale
+   7 = 7th step in spacing scale
 
 */
-/* Width Scale */
-.w1 { width: 1rem; }
-.w2 { width: 2rem; }
-.w3 { width: 4rem; }
-.w4 { width: 8rem; }
-.w5 { width: 16rem; }
-.w-10 { width: 10%; }
-.w-20 { width: 20%; }
-.w-25 { width: 25%; }
-.w-30 { width: 30%; }
-.w-33 { width: 33%; }
-.w-34 { width: 34%; }
-.w-40 { width: 40%; }
-.w-50 { width: 50%; }
-.w-60 { width: 60%; }
-.w-70 { width: 70%; }
-.w-75 { width: 75%; }
-.w-80 { width: 80%; }
-.w-90 { width: 90%; }
-.w-100 { width: 100%; }
-.w-third { width: calc( 100% / 3 ); }
-.w-two-thirds { width: calc( 100% / 1.5 ); }
-.w-auto { width: auto; }
-/*
-
-    OVERFLOW
-
-    Media Query Extensions:
-      -ns = not-small
-      -m  = medium
-      -l  = large
-
- */
-.overflow-visible { overflow: visible; }
-.overflow-hidden { overflow: hidden; }
-.overflow-scroll { overflow: scroll; }
-.overflow-auto { overflow: auto; }
-.overflow-x-visible { overflow-x: visible; }
-.overflow-x-hidden { overflow-x: hidden; }
-.overflow-x-scroll { overflow-x: scroll; }
-.overflow-x-auto { overflow-x: auto; }
-.overflow-y-visible { overflow-y: visible; }
-.overflow-y-hidden { overflow-y: hidden; }
-.overflow-y-scroll { overflow-y: scroll; }
-.overflow-y-auto { overflow-y: auto; }
-/*
-
-   POSITIONING
-   Docs: http://tachyons.io/docs/layout/position/
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
-
-*/
-.static { position: static; }
-.relative { position: relative; }
-.absolute { position: absolute; }
-.fixed { position: fixed; }
+.man1 { margin: -.25rem; }
+.man2 { margin: -.5rem; }
+.man3 { margin: -1rem; }
+.man4 { margin: -2rem; }
+.man5 { margin: -4rem; }
+.man6 { margin: -8rem; }
+.man7 { margin: -16rem; }
+.mln1 { margin-left: -.25rem; }
+.mln2 { margin-left: -.5rem; }
+.mln3 { margin-left: -1rem; }
+.mln4 { margin-left: -2rem; }
+.mln5 { margin-left: -4rem; }
+.mln6 { margin-left: -8rem; }
+.mln7 { margin-left: -16rem; }
+.mrn1 { margin-right: -.25rem; }
+.mrn2 { margin-right: -.5rem; }
+.mrn3 { margin-right: -1rem; }
+.mrn4 { margin-right: -2rem; }
+.mrn5 { margin-right: -4rem; }
+.mrn6 { margin-right: -8rem; }
+.mrn7 { margin-right: -16rem; }
+.mbn1 { margin-bottom: -.25rem; }
+.mbn2 { margin-bottom: -.5rem; }
+.mbn3 { margin-bottom: -1rem; }
+.mbn4 { margin-bottom: -2rem; }
+.mbn5 { margin-bottom: -4rem; }
+.mbn6 { margin-bottom: -8rem; }
+.mbn7 { margin-bottom: -16rem; }
+.mtn1 { margin-top: -.25rem; }
+.mtn2 { margin-top: -.5rem; }
+.mtn3 { margin-top: -1rem; }
+.mtn4 { margin-top: -2rem; }
+.mtn5 { margin-top: -4rem; }
+.mtn6 { margin-top: -8rem; }
+.mtn7 { margin-top: -16rem; }
+.mv1 { margin-top: .25rem; margin-bottom: .25rem; }
+.mv2 { margin-top: .5rem; margin-bottom: .5rem; }
+.mv3 { margin-top: 1rem; margin-bottom: 1rem; }
+.mv4 { margin-top: 2rem; margin-bottom: 2rem; }
+.mv5 { margin-top: 4rem; margin-bottom: 4rem; }
+.mv6 { margin-top: 8rem; margin-bottom: 8rem; }
+.mv7 { margin-top: 16rem; margin-bottom: 16rem; }
+.mhn1 { margin-left: -.25rem; margin-right: -.25rem; }
+.mhn2 { margin-left: -.5rem; margin-right: -.5rem; }
+.mhn3 { margin-left: -1rem; margin-right: -1rem; }
+.mhn4 { margin-left: -2rem; margin-right: -2rem; }
+.mhn5 { margin-left: -4rem; margin-right: -4rem; }
+.mhn6 { margin-left: -8rem; margin-right: -8rem; }
+.mhn7 { margin-left: -16rem; margin-right: -16rem; }
 /*
 
     OPACITY
@@ -849,6 +860,40 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .o-0 { opacity: 0; }
 /*
 
+  OUTLINES
+
+*/
+.outline { outline: 1px solid; }
+.outline-transparent { outline: 1px solid transparent; }
+.outline-0 { outline: 0; }
+/*
+
+    OVERFLOW
+
+ */
+.overflow-visible { overflow: visible; }
+.overflow-hidden { overflow: hidden; }
+.overflow-scroll { overflow: scroll; }
+.overflow-auto { overflow: auto; }
+.overflow-x-visible { overflow-x: visible; }
+.overflow-x-hidden { overflow-x: hidden; }
+.overflow-x-scroll { overflow-x: scroll; }
+.overflow-x-auto { overflow-x: auto; }
+.overflow-y-visible { overflow-y: visible; }
+.overflow-y-hidden { overflow-y: hidden; }
+.overflow-y-scroll { overflow-y: scroll; }
+.overflow-y-auto { overflow-y: auto; }
+/*
+
+    POSITIONING
+
+ */
+.static { position: static; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+/*
+
    ROTATIONS
 
 */
@@ -859,392 +904,36 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .rotate-225 { -webkit-transform: rotate( 225deg ); transform: rotate( 225deg ); }
 .rotate-270 { -webkit-transform: rotate( 270deg ); transform: rotate( 270deg ); }
 .rotate-315 { -webkit-transform: rotate( 315deg ); transform: rotate( 315deg ); }
-/*
-
-   SKINS
-   Docs: http://tachyons.io/docs/themes/skins/
-
-   Classes for setting foreground and background colors on elements.
-   If you haven't declared a border color, but set border on an element, it will 
-   be set to the current text color. 
-
-*/
-/* Text colors */
-.black-90 { color: rgba( 0, 0, 0, .9 ); }
-.black-80 { color: rgba( 0, 0, 0, .8 ); }
-.black-70 { color: rgba( 0, 0, 0, .7 ); }
-.black-60 { color: rgba( 0, 0, 0, .6 ); }
-.black-50 { color: rgba( 0, 0, 0, .5 ); }
-.black-40 { color: rgba( 0, 0, 0, .4 ); }
-.black-30 { color: rgba( 0, 0, 0, .3 ); }
-.black-20 { color: rgba( 0, 0, 0, .2 ); }
-.black-10 { color: rgba( 0, 0, 0, .1 ); }
-.black-05 { color: rgba( 0, 0, 0, .05 ); }
-.white-90 { color: rgba( 255, 255, 255, .9 ); }
-.white-80 { color: rgba( 255, 255, 255, .8 ); }
-.white-70 { color: rgba( 255, 255, 255, .7 ); }
-.white-60 { color: rgba( 255, 255, 255, .6 ); }
-.white-50 { color: rgba( 255, 255, 255, .5 ); }
-.white-40 { color: rgba( 255, 255, 255, .4 ); }
-.white-30 { color: rgba( 255, 255, 255, .3 ); }
-.white-20 { color: rgba( 255, 255, 255, .2 ); }
-.white-10 { color: rgba( 255, 255, 255, .1 ); }
-.black { color: #000; }
-.near-black { color: #111; }
-.dark-gray { color: #333; }
-.mid-gray { color: #555; }
-.gray { color: #777; }
-.silver { color: #999; }
-.light-silver { color: #aaa; }
-.moon-gray { color: #ccc; }
-.light-gray { color: #eee; }
-.near-white { color: #f4f4f4; }
-.white { color: #fff; }
-.dark-red { color: #e7040f; }
-.red { color: #ff4136; }
-.light-red { color: #ff725c; }
-.orange { color: #ff6300; }
-.gold { color: #ffb700; }
-.yellow { color: #ffd700; }
-.light-yellow { color: #fbf1a9; }
-.purple { color: #5e2ca5; }
-.light-purple { color: #a463f2; }
-.dark-pink { color: #d5008f; }
-.hot-pink { color: #ff41b4; }
-.pink { color: #ff80cc; }
-.light-pink { color: #ffa3d7; }
-.dark-green { color: #137752; }
-.green { color: #19a974; }
-.light-green { color: #9eebcf; }
-.navy { color: #001b44; }
-.dark-blue { color: #00449e; }
-.blue { color: #357edd; }
-.light-blue { color: #96ccff; }
-.lightest-blue { color: #cdecff; }
-.washed-blue { color: #f6fffe; }
-.washed-green { color: #e8fdf5; }
-.washed-yellow { color: #fffceb; }
-.washed-red { color: #ffdfdf; }
-.color-inherit { color: inherit; }
-.bg-black-90 { background-color: rgba( 0, 0, 0, .9 ); }
-.bg-black-80 { background-color: rgba( 0, 0, 0, .8 ); }
-.bg-black-70 { background-color: rgba( 0, 0, 0, .7 ); }
-.bg-black-60 { background-color: rgba( 0, 0, 0, .6 ); }
-.bg-black-50 { background-color: rgba( 0, 0, 0, .5 ); }
-.bg-black-40 { background-color: rgba( 0, 0, 0, .4 ); }
-.bg-black-30 { background-color: rgba( 0, 0, 0, .3 ); }
-.bg-black-20 { background-color: rgba( 0, 0, 0, .2 ); }
-.bg-black-10 { background-color: rgba( 0, 0, 0, .1 ); }
-.bg-black-05 { background-color: rgba( 0, 0, 0, .05 ); }
-.bg-white-90 { background-color: rgba( 255, 255, 255, .9 ); }
-.bg-white-80 { background-color: rgba( 255, 255, 255, .8 ); }
-.bg-white-70 { background-color: rgba( 255, 255, 255, .7 ); }
-.bg-white-60 { background-color: rgba( 255, 255, 255, .6 ); }
-.bg-white-50 { background-color: rgba( 255, 255, 255, .5 ); }
-.bg-white-40 { background-color: rgba( 255, 255, 255, .4 ); }
-.bg-white-30 { background-color: rgba( 255, 255, 255, .3 ); }
-.bg-white-20 { background-color: rgba( 255, 255, 255, .2 ); }
-.bg-white-10 { background-color: rgba( 255, 255, 255, .1 ); }
-/* Background colors */
-.bg-black { background-color: #000; }
-.bg-near-black { background-color: #111; }
-.bg-dark-gray { background-color: #333; }
-.bg-mid-gray { background-color: #555; }
-.bg-gray { background-color: #777; }
-.bg-silver { background-color: #999; }
-.bg-light-silver { background-color: #aaa; }
-.bg-moon-gray { background-color: #ccc; }
-.bg-light-gray { background-color: #eee; }
-.bg-near-white { background-color: #f4f4f4; }
-.bg-white { background-color: #fff; }
-.bg-transparent { background-color: transparent; }
-.bg-dark-red { background-color: #e7040f; }
-.bg-red { background-color: #ff4136; }
-.bg-light-red { background-color: #ff725c; }
-.bg-orange { background-color: #ff6300; }
-.bg-gold { background-color: #ffb700; }
-.bg-yellow { background-color: #ffd700; }
-.bg-light-yellow { background-color: #fbf1a9; }
-.bg-purple { background-color: #5e2ca5; }
-.bg-light-purple { background-color: #a463f2; }
-.bg-dark-pink { background-color: #d5008f; }
-.bg-hot-pink { background-color: #ff41b4; }
-.bg-pink { background-color: #ff80cc; }
-.bg-light-pink { background-color: #ffa3d7; }
-.bg-dark-green { background-color: #137752; }
-.bg-green { background-color: #19a974; }
-.bg-light-green { background-color: #9eebcf; }
-.bg-navy { background-color: #001b44; }
-.bg-dark-blue { background-color: #00449e; }
-.bg-blue { background-color: #357edd; }
-.bg-light-blue { background-color: #96ccff; }
-.bg-lightest-blue { background-color: #cdecff; }
-.bg-washed-blue { background-color: #f6fffe; }
-.bg-washed-green { background-color: #e8fdf5; }
-.bg-washed-yellow { background-color: #fffceb; }
-.bg-washed-red { background-color: #ffdfdf; }
-.bg-inherit { background-color: inherit; }
-/* 
-  
-   SKINS:PSEUDO
-
-   Customize the color of an element when
-   it is focused or hovered over.
- 
- */
-.hover-black:hover { color: #000; }
-.hover-black:focus { color: #000; }
-.hover-near-black:hover { color: #111; }
-.hover-near-black:focus { color: #111; }
-.hover-dark-gray:hover { color: #333; }
-.hover-dark-gray:focus { color: #333; }
-.hover-mid-gray:hover { color: #555; }
-.hover-mid-gray:focus { color: #555; }
-.hover-gray:hover { color: #777; }
-.hover-gray:focus { color: #777; }
-.hover-silver:hover { color: #999; }
-.hover-silver:focus { color: #999; }
-.hover-light-silver:hover { color: #aaa; }
-.hover-light-silver:focus { color: #aaa; }
-.hover-moon-gray:hover { color: #ccc; }
-.hover-moon-gray:focus { color: #ccc; }
-.hover-light-gray:hover { color: #eee; }
-.hover-light-gray:focus { color: #eee; }
-.hover-near-white:hover { color: #f4f4f4; }
-.hover-near-white:focus { color: #f4f4f4; }
-.hover-white:hover { color: #fff; }
-.hover-white:focus { color: #fff; }
-.hover-black-90:hover { color: rgba( 0, 0, 0, .9 ); }
-.hover-black-90:focus { color: rgba( 0, 0, 0, .9 ); }
-.hover-black-80:hover { color: rgba( 0, 0, 0, .8 ); }
-.hover-black-80:focus { color: rgba( 0, 0, 0, .8 ); }
-.hover-black-70:hover { color: rgba( 0, 0, 0, .7 ); }
-.hover-black-70:focus { color: rgba( 0, 0, 0, .7 ); }
-.hover-black-60:hover { color: rgba( 0, 0, 0, .6 ); }
-.hover-black-60:focus { color: rgba( 0, 0, 0, .6 ); }
-.hover-black-50:hover { color: rgba( 0, 0, 0, .5 ); }
-.hover-black-50:focus { color: rgba( 0, 0, 0, .5 ); }
-.hover-black-40:hover { color: rgba( 0, 0, 0, .4 ); }
-.hover-black-40:focus { color: rgba( 0, 0, 0, .4 ); }
-.hover-black-30:hover { color: rgba( 0, 0, 0, .3 ); }
-.hover-black-30:focus { color: rgba( 0, 0, 0, .3 ); }
-.hover-black-20:hover { color: rgba( 0, 0, 0, .2 ); }
-.hover-black-20:focus { color: rgba( 0, 0, 0, .2 ); }
-.hover-black-10:hover { color: rgba( 0, 0, 0, .1 ); }
-.hover-black-10:focus { color: rgba( 0, 0, 0, .1 ); }
-.hover-white-90:hover { color: rgba( 255, 255, 255, .9 ); }
-.hover-white-90:focus { color: rgba( 255, 255, 255, .9 ); }
-.hover-white-80:hover { color: rgba( 255, 255, 255, .8 ); }
-.hover-white-80:focus { color: rgba( 255, 255, 255, .8 ); }
-.hover-white-70:hover { color: rgba( 255, 255, 255, .7 ); }
-.hover-white-70:focus { color: rgba( 255, 255, 255, .7 ); }
-.hover-white-60:hover { color: rgba( 255, 255, 255, .6 ); }
-.hover-white-60:focus { color: rgba( 255, 255, 255, .6 ); }
-.hover-white-50:hover { color: rgba( 255, 255, 255, .5 ); }
-.hover-white-50:focus { color: rgba( 255, 255, 255, .5 ); }
-.hover-white-40:hover { color: rgba( 255, 255, 255, .4 ); }
-.hover-white-40:focus { color: rgba( 255, 255, 255, .4 ); }
-.hover-white-30:hover { color: rgba( 255, 255, 255, .3 ); }
-.hover-white-30:focus { color: rgba( 255, 255, 255, .3 ); }
-.hover-white-20:hover { color: rgba( 255, 255, 255, .2 ); }
-.hover-white-20:focus { color: rgba( 255, 255, 255, .2 ); }
-.hover-white-10:hover { color: rgba( 255, 255, 255, .1 ); }
-.hover-white-10:focus { color: rgba( 255, 255, 255, .1 ); }
-.hover-inherit:hover, .hover-inherit:focus { color: inherit; }
-.hover-bg-black:hover { background-color: #000; }
-.hover-bg-black:focus { background-color: #000; }
-.hover-bg-near-black:hover { background-color: #111; }
-.hover-bg-near-black:focus { background-color: #111; }
-.hover-bg-dark-gray:hover { background-color: #333; }
-.hover-bg-dark-gray:focus { background-color: #333; }
-.hover-bg-mid-gray:hover { background-color: #555; }
-.hover-bg-mid-gray:focus { background-color: #555; }
-.hover-bg-gray:hover { background-color: #777; }
-.hover-bg-gray:focus { background-color: #777; }
-.hover-bg-silver:hover { background-color: #999; }
-.hover-bg-silver:focus { background-color: #999; }
-.hover-bg-light-silver:hover { background-color: #aaa; }
-.hover-bg-light-silver:focus { background-color: #aaa; }
-.hover-bg-moon-gray:hover { background-color: #ccc; }
-.hover-bg-moon-gray:focus { background-color: #ccc; }
-.hover-bg-light-gray:hover { background-color: #eee; }
-.hover-bg-light-gray:focus { background-color: #eee; }
-.hover-bg-near-white:hover { background-color: #f4f4f4; }
-.hover-bg-near-white:focus { background-color: #f4f4f4; }
-.hover-bg-white:hover { background-color: #fff; }
-.hover-bg-white:focus { background-color: #fff; }
-.hover-bg-transparent:hover { background-color: transparent; }
-.hover-bg-transparent:focus { background-color: transparent; }
-.hover-bg-black-90:hover { background-color: rgba( 0, 0, 0, .9 ); }
-.hover-bg-black-90:focus { background-color: rgba( 0, 0, 0, .9 ); }
-.hover-bg-black-80:hover { background-color: rgba( 0, 0, 0, .8 ); }
-.hover-bg-black-80:focus { background-color: rgba( 0, 0, 0, .8 ); }
-.hover-bg-black-70:hover { background-color: rgba( 0, 0, 0, .7 ); }
-.hover-bg-black-70:focus { background-color: rgba( 0, 0, 0, .7 ); }
-.hover-bg-black-60:hover { background-color: rgba( 0, 0, 0, .6 ); }
-.hover-bg-black-60:focus { background-color: rgba( 0, 0, 0, .6 ); }
-.hover-bg-black-50:hover { background-color: rgba( 0, 0, 0, .5 ); }
-.hover-bg-black-50:focus { background-color: rgba( 0, 0, 0, .5 ); }
-.hover-bg-black-40:hover { background-color: rgba( 0, 0, 0, .4 ); }
-.hover-bg-black-40:focus { background-color: rgba( 0, 0, 0, .4 ); }
-.hover-bg-black-30:hover { background-color: rgba( 0, 0, 0, .3 ); }
-.hover-bg-black-30:focus { background-color: rgba( 0, 0, 0, .3 ); }
-.hover-bg-black-20:hover { background-color: rgba( 0, 0, 0, .2 ); }
-.hover-bg-black-20:focus { background-color: rgba( 0, 0, 0, .2 ); }
-.hover-bg-black-10:hover { background-color: rgba( 0, 0, 0, .1 ); }
-.hover-bg-black-10:focus { background-color: rgba( 0, 0, 0, .1 ); }
-.hover-bg-white-90:hover { background-color: rgba( 255, 255, 255, .9 ); }
-.hover-bg-white-90:focus { background-color: rgba( 255, 255, 255, .9 ); }
-.hover-bg-white-80:hover { background-color: rgba( 255, 255, 255, .8 ); }
-.hover-bg-white-80:focus { background-color: rgba( 255, 255, 255, .8 ); }
-.hover-bg-white-70:hover { background-color: rgba( 255, 255, 255, .7 ); }
-.hover-bg-white-70:focus { background-color: rgba( 255, 255, 255, .7 ); }
-.hover-bg-white-60:hover { background-color: rgba( 255, 255, 255, .6 ); }
-.hover-bg-white-60:focus { background-color: rgba( 255, 255, 255, .6 ); }
-.hover-bg-white-50:hover { background-color: rgba( 255, 255, 255, .5 ); }
-.hover-bg-white-50:focus { background-color: rgba( 255, 255, 255, .5 ); }
-.hover-bg-white-40:hover { background-color: rgba( 255, 255, 255, .4 ); }
-.hover-bg-white-40:focus { background-color: rgba( 255, 255, 255, .4 ); }
-.hover-bg-white-30:hover { background-color: rgba( 255, 255, 255, .3 ); }
-.hover-bg-white-30:focus { background-color: rgba( 255, 255, 255, .3 ); }
-.hover-bg-white-20:hover { background-color: rgba( 255, 255, 255, .2 ); }
-.hover-bg-white-20:focus { background-color: rgba( 255, 255, 255, .2 ); }
-.hover-bg-white-10:hover { background-color: rgba( 255, 255, 255, .1 ); }
-.hover-bg-white-10:focus { background-color: rgba( 255, 255, 255, .1 ); }
-.hover-dark-red:hover { color: #e7040f; }
-.hover-dark-red:focus { color: #e7040f; }
-.hover-red:hover { color: #ff4136; }
-.hover-red:focus { color: #ff4136; }
-.hover-light-red:hover { color: #ff725c; }
-.hover-light-red:focus { color: #ff725c; }
-.hover-orange:hover { color: #ff6300; }
-.hover-orange:focus { color: #ff6300; }
-.hover-gold:hover { color: #ffb700; }
-.hover-gold:focus { color: #ffb700; }
-.hover-yellow:hover { color: #ffd700; }
-.hover-yellow:focus { color: #ffd700; }
-.hover-light-yellow:hover { color: #fbf1a9; }
-.hover-light-yellow:focus { color: #fbf1a9; }
-.hover-purple:hover { color: #5e2ca5; }
-.hover-purple:focus { color: #5e2ca5; }
-.hover-light-purple:hover { color: #a463f2; }
-.hover-light-purple:focus { color: #a463f2; }
-.hover-dark-pink:hover { color: #d5008f; }
-.hover-dark-pink:focus { color: #d5008f; }
-.hover-hot-pink:hover { color: #ff41b4; }
-.hover-hot-pink:focus { color: #ff41b4; }
-.hover-pink:hover { color: #ff80cc; }
-.hover-pink:focus { color: #ff80cc; }
-.hover-light-pink:hover { color: #ffa3d7; }
-.hover-light-pink:focus { color: #ffa3d7; }
-.hover-dark-green:hover { color: #137752; }
-.hover-dark-green:focus { color: #137752; }
-.hover-green:hover { color: #19a974; }
-.hover-green:focus { color: #19a974; }
-.hover-light-green:hover { color: #9eebcf; }
-.hover-light-green:focus { color: #9eebcf; }
-.hover-navy:hover { color: #001b44; }
-.hover-navy:focus { color: #001b44; }
-.hover-dark-blue:hover { color: #00449e; }
-.hover-dark-blue:focus { color: #00449e; }
-.hover-blue:hover { color: #357edd; }
-.hover-blue:focus { color: #357edd; }
-.hover-light-blue:hover { color: #96ccff; }
-.hover-light-blue:focus { color: #96ccff; }
-.hover-lightest-blue:hover { color: #cdecff; }
-.hover-lightest-blue:focus { color: #cdecff; }
-.hover-washed-blue:hover { color: #f6fffe; }
-.hover-washed-blue:focus { color: #f6fffe; }
-.hover-washed-green:hover { color: #e8fdf5; }
-.hover-washed-green:focus { color: #e8fdf5; }
-.hover-washed-yellow:hover { color: #fffceb; }
-.hover-washed-yellow:focus { color: #fffceb; }
-.hover-washed-red:hover { color: #ffdfdf; }
-.hover-washed-red:focus { color: #ffdfdf; }
-.hover-bg-dark-red:hover { background-color: #e7040f; }
-.hover-bg-dark-red:focus { background-color: #e7040f; }
-.hover-bg-red:hover { background-color: #ff4136; }
-.hover-bg-red:focus { background-color: #ff4136; }
-.hover-bg-light-red:hover { background-color: #ff725c; }
-.hover-bg-light-red:focus { background-color: #ff725c; }
-.hover-bg-orange:hover { background-color: #ff6300; }
-.hover-bg-orange:focus { background-color: #ff6300; }
-.hover-bg-gold:hover { background-color: #ffb700; }
-.hover-bg-gold:focus { background-color: #ffb700; }
-.hover-bg-yellow:hover { background-color: #ffd700; }
-.hover-bg-yellow:focus { background-color: #ffd700; }
-.hover-bg-light-yellow:hover { background-color: #fbf1a9; }
-.hover-bg-light-yellow:focus { background-color: #fbf1a9; }
-.hover-bg-purple:hover { background-color: #5e2ca5; }
-.hover-bg-purple:focus { background-color: #5e2ca5; }
-.hover-bg-light-purple:hover { background-color: #a463f2; }
-.hover-bg-light-purple:focus { background-color: #a463f2; }
-.hover-bg-dark-pink:hover { background-color: #d5008f; }
-.hover-bg-dark-pink:focus { background-color: #d5008f; }
-.hover-bg-hot-pink:hover { background-color: #ff41b4; }
-.hover-bg-hot-pink:focus { background-color: #ff41b4; }
-.hover-bg-pink:hover { background-color: #ff80cc; }
-.hover-bg-pink:focus { background-color: #ff80cc; }
-.hover-bg-light-pink:hover { background-color: #ffa3d7; }
-.hover-bg-light-pink:focus { background-color: #ffa3d7; }
-.hover-bg-dark-green:hover { background-color: #137752; }
-.hover-bg-dark-green:focus { background-color: #137752; }
-.hover-bg-green:hover { background-color: #19a974; }
-.hover-bg-green:focus { background-color: #19a974; }
-.hover-bg-light-green:hover { background-color: #9eebcf; }
-.hover-bg-light-green:focus { background-color: #9eebcf; }
-.hover-bg-navy:hover { background-color: #001b44; }
-.hover-bg-navy:focus { background-color: #001b44; }
-.hover-bg-dark-blue:hover { background-color: #00449e; }
-.hover-bg-dark-blue:focus { background-color: #00449e; }
-.hover-bg-blue:hover { background-color: #357edd; }
-.hover-bg-blue:focus { background-color: #357edd; }
-.hover-bg-light-blue:hover { background-color: #96ccff; }
-.hover-bg-light-blue:focus { background-color: #96ccff; }
-.hover-bg-lightest-blue:hover { background-color: #cdecff; }
-.hover-bg-lightest-blue:focus { background-color: #cdecff; }
-.hover-bg-washed-blue:hover { background-color: #f6fffe; }
-.hover-bg-washed-blue:focus { background-color: #f6fffe; }
-.hover-bg-washed-green:hover { background-color: #e8fdf5; }
-.hover-bg-washed-green:focus { background-color: #e8fdf5; }
-.hover-bg-washed-yellow:hover { background-color: #fffceb; }
-.hover-bg-washed-yellow:focus { background-color: #fffceb; }
-.hover-bg-washed-red:hover { background-color: #ffdfdf; }
-.hover-bg-washed-red:focus { background-color: #ffdfdf; }
-.hover-bg-inherit:hover, .hover-bg-inherit:focus { background-color: inherit; }
 /* Variables */
+/* Spacing Scale - based on a ratio of 1:2 */
+/* Media Queries */
 /*
    SPACING
-   Docs: http://tachyons.io/docs/layout/spacing/
 
    An eight step powers of two scale ranging from 0 to 16rem.
+   Namespaces are composable and thus highly grockable - check the legend below
 
-   Base:
-     p = padding
-     m = margin
+   Legend:
 
-   Modifiers:
-     a = all
-     h = horizontal
-     v = vertical
-     t = top
-     r = right
-     b = bottom
-     l = left
+   p = padding
+   m = margin
 
-     0 = none
-     1 = 1st step in spacing scale
-     2 = 2nd step in spacing scale
-     3 = 3rd step in spacing scale
-     4 = 4th step in spacing scale
-     5 = 5th step in spacing scale
-     6 = 6th step in spacing scale
-     7 = 7th step in spacing scale
+   a = all
+   h = horizontal
+   v = vertical
+   t = top
+   r = right
+   b = bottom
+   l = left
 
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
+   0 = none
+   1 = 1st step in spacing scale
+   2 = 2nd step in spacing scale
+   3 = 3rd step in spacing scale
+   4 = 4th step in spacing scale
+   5 = 5th step in spacing scale
+   6 = 6th step in spacing scale
+   7 = 7th step in spacing scale
 
 */
 .pa0 { padding: 0; }
@@ -1360,90 +1049,26 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .mh6 { margin-left: 8rem; margin-right: 8rem; }
 .mh7 { margin-left: 16rem; margin-right: 16rem; }
 /*
-   NEGATIVE MARGINS
-
-   Base:
-     n = negative
-
-   Modifiers:
-     a = all
-     t = top
-     r = right
-     b = bottom
-     l = left
-
-     1 = 1st step in spacing scale
-     2 = 2nd step in spacing scale
-     3 = 3rd step in spacing scale
-     4 = 4th step in spacing scale
-     5 = 5th step in spacing scale
-     6 = 6th step in spacing scale
-     7 = 7th step in spacing scale
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
-
-*/
-.na1 { margin: -.25rem; }
-.na2 { margin: -.5rem; }
-.na3 { margin: -1rem; }
-.na4 { margin: -2rem; }
-.na5 { margin: -4rem; }
-.na6 { margin: -8rem; }
-.na7 { margin: -16rem; }
-.nl1 { margin-left: -.25rem; }
-.nl2 { margin-left: -.5rem; }
-.nl3 { margin-left: -1rem; }
-.nl4 { margin-left: -2rem; }
-.nl5 { margin-left: -4rem; }
-.nl6 { margin-left: -8rem; }
-.nl7 { margin-left: -16rem; }
-.nr1 { margin-right: -.25rem; }
-.nr2 { margin-right: -.5rem; }
-.nr3 { margin-right: -1rem; }
-.nr4 { margin-right: -2rem; }
-.nr5 { margin-right: -4rem; }
-.nr6 { margin-right: -8rem; }
-.nr7 { margin-right: -16rem; }
-.nb1 { margin-bottom: -.25rem; }
-.nb2 { margin-bottom: -.5rem; }
-.nb3 { margin-bottom: -1rem; }
-.nb4 { margin-bottom: -2rem; }
-.nb5 { margin-bottom: -4rem; }
-.nb6 { margin-bottom: -8rem; }
-.nb7 { margin-bottom: -16rem; }
-.nt1 { margin-top: -.25rem; }
-.nt2 { margin-top: -.5rem; }
-.nt3 { margin-top: -1rem; }
-.nt4 { margin-top: -2rem; }
-.nt5 { margin-top: -4rem; }
-.nt6 { margin-top: -8rem; }
-.nt7 { margin-top: -16rem; }
-/*
 
   TABLES
-  Docs: http://tachyons.io/docs/elements/tables/
 
 */
 .collapse { border-collapse: collapse; border-spacing: 0; }
-.striped--light-silver:nth-child(odd) { background-color: #aaa; }
+.striped--moon-gray:nth-child(odd) { background-color: #aaa; }
 .striped--moon-gray:nth-child(odd) { background-color: #ccc; }
-.striped--light-gray:nth-child(odd) { background-color: #eee; }
+.striped--light-gray:nth-child(odd) { background-color: #f8f8f8; }
 .striped--near-white:nth-child(odd) { background-color: #f4f4f4; }
-.stripe-light:nth-child(odd) { background-color: rgba( 255, 255, 255, .1 ); }
-.stripe-dark:nth-child(odd) { background-color: rgba( 0, 0, 0, .1 ); }
+/*
+
+  TEXT ALIGN
+
+*/
+.tl { text-align: left; }
+.tr { text-align: right; }
+.tc { text-align: center; }
 /*
 
    TEXT DECORATION
-   Docs: http://tachyons.io/docs/typography/text-decoration/
-
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
 
 */
 .strike { text-decoration: line-through; }
@@ -1451,46 +1076,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .no-underline { text-decoration: none; }
 /*
 
-  TEXT ALIGN
-  Docs: http://tachyons.io/docs/typography/text-align/
-
-  Base
-    t = text-align
-
-  Modifiers
-    l = left
-    r = right
-    c = center
-    j = justify
-
-  Media Query Extensions:
-    -ns = not-small
-    -m  = medium
-    -l  = large
-
-*/
-.tl { text-align: left; }
-.tr { text-align: right; }
-.tc { text-align: center; }
-.tj { text-align: justify; }
-/*
-
    TEXT TRANSFORM
-   Docs: http://tachyons.io/docs/typography/text-transform/
-
-   Base:
-     tt = text-transform
-
-   Modifiers
-     c = capitalize
-     l = lowercase
-     u = uppercase
-     n = none
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
 
 */
 .ttc { text-transform: capitalize; }
@@ -1500,31 +1086,9 @@ code, .code { font-family: Consolas, monaco, monospace; }
 /*
 
    TYPE SCALE
-   Docs: http://tachyons.io/docs/typography/scale/
 
-   Base:
-    f = font-size
-
-   Modifiers
-     1 = 1st step in size scale
-     2 = 2nd step in size scale
-     3 = 3rd step in size scale
-     4 = 4th step in size scale
-     5 = 5th step in size scale
-     6 = 6th step in size scale
-     7 = 7th step in size scale
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
 */
-/*
- * For Hero/Marketing Titles
- *
- * These generally are too large for mobile
- * so be careful using them on smaller screens.
- * */
+/* For Hero Titles */
 .f-6, .f-headline { font-size: 6rem; }
 .f-5, .f-subheadline { font-size: 5rem; }
 /* Type Scale */
@@ -1534,17 +1098,9 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .f4 { font-size: 1.25rem; }
 .f5 { font-size: 1rem; }
 .f6 { font-size: .875rem; }
-.f7 { font-size: .75rem; }
-/* Small and hard to read for many people so use with extreme caution */
 /*
 
    TYPOGRAPHY
-   http://tachyons.io/docs/typography/measure/
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
 
 */
 /* Measure is limited to ~66 characters */
@@ -1562,25 +1118,21 @@ code, .code { font-family: Consolas, monaco, monospace; }
 
    UTILITIES
 
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
-
 */
-/* Equivalent to .overflow-y-scroll */
 .overflow-container { overflow-y: scroll; }
 .center { margin-right: auto; margin-left: auto; }
-.mr-auto { margin-right: auto; }
-.ml-auto { margin-left: auto; }
+/*
+
+   VERTICAL ALIGN
+
+*/
+.v-base { vertical-align: baseline; }
+.v-mid { vertical-align: middle; }
+.v-top { vertical-align: top; }
+.v-btm { vertical-align: bottom; }
 /*
 
    VISIBILITY
-
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
 
 */
 /*
@@ -1592,18 +1144,40 @@ code, .code { font-family: Consolas, monaco, monospace; }
 
    WHITE SPACE
 
-   Media Query Extensions:
-     -ns = not-small
-     -m  = medium
-     -l  = large
-
 */
 .ws-normal { white-space: normal; }
 .nowrap { white-space: nowrap; }
 .pre { white-space: pre; }
 /*
 
-   VERTICAL ALIGN
+   WIDTHS
+   Docs: http://tachyons.io/docs/layout/widths/
+
+   Base:
+     w = width
+
+   Modifiers
+     1 = 1st step in width scale
+     2 = 2nd step in width scale
+     3 = 3rd step in width scale
+     4 = 4th step in width scale
+     5 = 5th step in width scale
+
+     -10  = literal value 10%
+     -20  = literal value 20%
+     -25  = literal value 25%
+     -33  = literal value 33%
+     -34  = literal value 34%
+     -40  = literal value 40%
+     -50  = literal value 50%
+     -60  = literal value 60%
+     -75  = literal value 75%
+     -80  = literal value 80%
+     -100 = literal value 100%
+
+     -third = 100% / 3 (Not supported in opera mini or IE8)
+     -auto  = string value auto
+
 
    Media Query Extensions:
      -ns = not-small
@@ -1611,78 +1185,37 @@ code, .code { font-family: Consolas, monaco, monospace; }
      -l  = large
 
 */
-.v-base { vertical-align: baseline; }
-.v-mid { vertical-align: middle; }
-.v-top { vertical-align: top; }
-.v-btm { vertical-align: bottom; }
+/* Width Scale */
+.w1 { width: 1rem; }
+.w2 { width: 2rem; }
+.w3 { width: 4rem; }
+.w4 { width: 8rem; }
+.w5 { width: 16rem; }
+.w-10 { width: 10%; }
+.w-20 { width: 20%; }
+.w-25 { width: 25%; }
+.w-30 { width: 30%; }
+.w-33 { width: 33%; }
+.w-34 { width: 34%; }
+.w-40 { width: 40%; }
+.w-50 { width: 50%; }
+.w-60 { width: 60%; }
+.w-70 { width: 70%; }
+.w-75 { width: 75%; }
+.w-80 { width: 80%; }
+.w-90 { width: 90%; }
+.w-100 { width: 100%; }
+.w-third { width: calc( 100% / 3 ); }
+.w-two-thirds { width: calc( 100% / 1.5 ); }
+.w-auto { width: auto; }
 /*
 
-  HOVER EFFECTS
-  Docs: http://tachyons.io/docs/themes/hovers/
-
-    - Dim
-    - Glow
-    - Hide Child
-    - Underline text
-    - Grow
-    - Pointer
-    - Shadow
+  WORD BREAK
 
 */
-/*
-
-  Dim element on hover by adding the dim class.
-
-*/
-.dim { opacity: 1; transition: opacity .15s ease-in; }
-.dim:hover, .dim:focus { opacity: .5; transition: opacity .15s ease-in; }
-.dim:active { opacity: .8; transition: opacity .15s ease-out; }
-/*
-
-  Animate opacity to 100% on hover by adding the glow class.
-
-*/
-.glow { transition: opacity .15s ease-in; }
-.glow:hover, .glow:focus { opacity: 1; transition: opacity .15s ease-in; }
-/*
-
-  Hide child & reveal on hover:
-
-  Put the hide-child class on a parent element and any nested element with the
-  child class will be hidden and displayed on hover or focus.
-
-  <div class="hide-child">
-    <div class="child"> Hidden until hover or focus </div>
-    <div class="child"> Hidden until hover or focus </div>
-    <div class="child"> Hidden until hover or focus </div>
-    <div class="child"> Hidden until hover or focus </div>
-  </div>
-*/
-.hide-child .child { opacity: 0; transition: opacity .15s ease-in; }
-.hide-child:hover  .child, .hide-child:focus  .child, .hide-child:active .child { opacity: 1; transition: opacity .15s ease-in; }
-.underline-hover:hover, .underline-hover:focus { text-decoration: underline; }
-/* Can combine this with overflow-hidden to make background images grow on hover
- * even if you are using background-size: cover */
-.grow { -moz-osx-font-smoothing: grayscale; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translateZ( 0 ); transform: translateZ( 0 ); transition: -webkit-transform .25s ease-out; transition: transform .25s ease-out; transition: transform .25s ease-out, -webkit-transform .25s ease-out; }
-.grow:hover, .grow:focus { -webkit-transform: scale( 1.05 ); transform: scale( 1.05 ); }
-.grow:active { -webkit-transform: scale( .90 ); transform: scale( .90 ); }
-.grow-large { -moz-osx-font-smoothing: grayscale; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transform: translateZ( 0 ); transform: translateZ( 0 ); transition: -webkit-transform .25s ease-in-out; transition: transform .25s ease-in-out; transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out; }
-.grow-large:hover, .grow-large:focus { -webkit-transform: scale( 1.2 ); transform: scale( 1.2 ); }
-.grow-large:active { -webkit-transform: scale( .95 ); transform: scale( .95 ); }
-/* Add pointer on hover */
-.pointer:hover { cursor: pointer; }
-/* 
-   Add shadow on hover.
-
-   Performant box-shadow animation pattern from 
-   http://tobiasahlin.com/blog/how-to-animate-box-shadow/ 
-*/
-.shadow-hover { cursor: pointer; position: relative; transition: all .5s cubic-bezier( .165, .84, .44, 1 ); }
-.shadow-hover::after { content: ''; box-shadow: 0 0 16px 2px rgba( 0, 0, 0, .2 ); border-radius: inherit; opacity: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; transition: opacity .5s cubic-bezier( .165, .84, .44, 1 ); }
-.shadow-hover:hover::after, .shadow-hover:focus::after { opacity: 1; }
-/* Combine with classes in skins and skins-pseudo for 
- * many different transition possibilities. */
-.bg-animate, .bg-animate:hover, .bg-animate:focus { transition: background-color .15s ease-in-out; }
+.word-normal { word-break: normal; }
+.word-wrap { word-break: break-all; }
+.word-nowrap { word-break: keep-all; }
 /*
 
   Z-INDEX
@@ -1729,34 +1262,63 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .z-inherit { z-index: inherit; }
 .z-initial { z-index: initial; }
 .z-unset { z-index: unset; }
+/* egghead custom Tachyons overrides */
+/* Modified by Egghead */
 /*
 
-    NESTED
-    Tachyons module for styling nested elements
-    that are generated by a cms.
+  FLEXBOX
+
+  Media Query Extensions:
+   -ns = not-small
+   -m  = medium
+   -l  = large
 
 */
-.nested-copy-line-height p, .nested-copy-line-height ul,
-.nested-copy-line-height ol { line-height: 1.5; }
-.nested-headline-line-height h1, .nested-headline-line-height h2,
-.nested-headline-line-height h3, .nested-headline-line-height h4,
-.nested-headline-line-height h5, .nested-headline-line-height h6 { line-height: 1.25; }
-.nested-list-reset ul, .nested-list-reset ol { padding-left: 0; margin-left: 0; list-style-type: none; }
-.nested-copy-indent p+p { text-indent: 1em; margin-top: 0; margin-bottom: 0; }
-.nested-copy-seperator p+p { margin-top: 1.5em; }
-.nested-img img { width: 100%; max-width: 100%; display: block; }
-.nested-links a { color: #357edd; transition: color .15s ease-in; }
-.nested-links a:hover { color: #96ccff; transition: color .15s ease-in; }
-.nested-links a:focus { color: #96ccff; transition: color .15s ease-in; }
-/*
-
-  STYLES
-
-  Add custom styles here.
-
-*/
-/* Variables */
-/* Importing here will allow you to override any variables in the modules */
+.flex { display: -webkit-box; display: -ms-flexbox; display: flex; }
+.inline-flex { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; }
+/* 1. Fix for Chrome 44 bug.
+ * https://code.google.com/p/chromium/issues/detail?id=506893 */
+.flex-auto { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; min-width: 0; /* 1 */ min-height: 0; /* 1 */ }
+.flex-none { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
+.flex-column { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+.flex-row { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+.flex-wrap { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+.items-start { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
+.items-end { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
+.items-center { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.items-baseline { -webkit-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; }
+.items-stretch { -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
+.self-start { -ms-flex-item-align: start; align-self: flex-start; }
+.self-end { -ms-flex-item-align: end; align-self: flex-end; }
+.self-center { -ms-flex-item-align: center; -ms-grid-row-align: center; align-self: center; }
+.self-baseline { -ms-flex-item-align: baseline; align-self: baseline; }
+.self-stretch { -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; align-self: stretch; }
+.justify-start { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; }
+.justify-end { -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
+.justify-center { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.justify-between { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+.justify-around { -ms-flex-pack: distribute; justify-content: space-around; }
+.content-start { -ms-flex-line-pack: start; align-content: flex-start; }
+.content-end { -ms-flex-line-pack: end; align-content: flex-end; }
+.content-center { -ms-flex-line-pack: center; align-content: center; }
+.content-between { -ms-flex-line-pack: justify; align-content: space-between; }
+.content-around { -ms-flex-line-pack: distribute; align-content: space-around; }
+.content-stretch { -ms-flex-line-pack: stretch; align-content: stretch; }
+.order-0 { -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; }
+.order-1 { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
+.order-2 { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
+.order-3 { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
+.order-4 { -webkit-box-ordinal-group: 5; -ms-flex-order: 4; order: 4; }
+.order-5 { -webkit-box-ordinal-group: 6; -ms-flex-order: 5; order: 5; }
+.order-6 { -webkit-box-ordinal-group: 7; -ms-flex-order: 6; order: 6; }
+.order-7 { -webkit-box-ordinal-group: 8; -ms-flex-order: 7; order: 7; }
+.order-8 { -webkit-box-ordinal-group: 9; -ms-flex-order: 8; order: 8; }
+.order-last { -webkit-box-ordinal-group: 100000; -ms-flex-order: 99999; order: 99999; }
+.flex-grow-1 { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; }
+.flex-grow-0 { -webkit-box-flex: 0; -ms-flex-positive: 0; flex-grow: 0; }
+.flex-shrink-1 { -ms-flex-negative: 1; flex-shrink: 1; }
+.flex-shrink-0 { -ms-flex-negative: 0; flex-shrink: 0; }
+/* Modified by Egghead */
 /*
 
    Tachyons
@@ -1768,68 +1330,410 @@ code, .code { font-family: Consolas, monaco, monospace; }
    Colors
 
 */
+:root {/* Next iteration vars *//* Still active previous vars */ }
 /*
 
-  CUSTOM MEDIA QUERIES
+   SKINS
+   Docs: http://tachyons.io/docs/themes/skins/
 
-  Media query values can be changed to fit your own content.
-  There are no magic bullets when it comes to media query width values.
-  They should be declared in em units - and they should be set to meet
-  the needs of your content. You can also add additional media queries,
-  or remove some of the existing ones.
-
-  These media queries can be referenced like so:
-
-  @media (--breakpoint-not-small) {
-    .medium-and-larger-specific-style {
-      background-color: red;
-    }
-  }
-
-  @media (--breakpoint-medium) {
-    .medium-screen-specific-style {
-      background-color: red;
-    }
-  }
-
-  @media (--breakpoint-large) {
-    .large-and-larger-screen-specific-style {
-      background-color: red;
-    }
-  }
+   Classes for setting foreground and background colors on elements.
+   If you haven't declared a border color, but set border on an element, it will
+   be set to the current text color.
 
 */
-/* Media Queries */
+/* Text colors */
+.black-90 { color: rgba( 0, 0, 0, .9 ); }
+.black-80 { color: rgba( 0, 0, 0, .8 ); }
+.black-70 { color: rgba( 0, 0, 0, .7 ); }
+.black-60 { color: rgba( 0, 0, 0, .6 ); }
+.black-50 { color: rgba( 0, 0, 0, .5 ); }
+.black-40 { color: rgba( 0, 0, 0, .4 ); }
+.black-30 { color: rgba( 0, 0, 0, .3 ); }
+.black-20 { color: rgba( 0, 0, 0, .2 ); }
+.black-10 { color: rgba( 0, 0, 0, .1 ); }
+.black-05 { color: rgba( 0, 0, 0, .05 ); }
+.white-90 { color: rgba( 255, 255, 255, .9 ); }
+.white-80 { color: rgba( 255, 255, 255, .8 ); }
+.white-70 { color: rgba( 255, 255, 255, .7 ); }
+.white-60 { color: rgba( 255, 255, 255, .6 ); }
+.white-50 { color: rgba( 255, 255, 255, .5 ); }
+.white-40 { color: rgba( 255, 255, 255, .4 ); }
+.white-30 { color: rgba( 255, 255, 255, .3 ); }
+.white-20 { color: rgba( 255, 255, 255, .2 ); }
+.white-10 { color: rgba( 255, 255, 255, .1 ); }
+.black { color: #000; }
+.white { color: #fff; }
+.white-secondary { color: #f8f8f8; }
+.base { color: #232c3b; }
+.base-secondary { color: #171e27; }
+.gray { color: #f4f5f9; }
+.gray-secondary { color: #e2e3e7; }
+.dark-gray { color: #63768d; }
+.dark-gray-secondary { color: #b0b6be; }
+.blue { color: #4786ff; }
+.blue-secondary { color: #386fda; }
+.dark-blue { color: #344055; }
+.dark-blue-secondary { color: #273040; }
+.green { color: #59cd90; }
+.green-secondary { color: #409b6b; }
+.orange { color: #fd9126; }
+.orange-secondary { color: #c97420; }
+.red { color: #f0624d; }
+.red-secondary { color: #c44c3a; }
+.yellow { color: #fbc155; }
+.yellow-secondary { color: #d2a043; }
+/* Legacy classes */
+.dark-navy { color: #171e27; }
+.navy { color: #232c3b; }
+.light-navy { color: #344055; }
+.light-gray { color: #f8f8f8; }
+.tag-gray { color: rgba( 255, 255, 255, .9 ); }
+.dark-orange { color: #c97420; }
+.tag-orange { color: rgba( 255, 255, 255, .7 ); }
+.tag-blue { color: rgba( 255, 255, 255, .7 ); }
+.dark-green { color: #409b6b; }
+.turquoise { color: #409b6b; }
+.tag-turquoise { color: rgba( 255, 255, 255, .7 ); }
+.dark-red { color: #c44c3a; }
+/* Background colors */
+.bg-black-90 { background-color: rgba( 0, 0, 0, .9 ); }
+.bg-black-80 { background-color: rgba( 0, 0, 0, .8 ); }
+.bg-black-70 { background-color: rgba( 0, 0, 0, .7 ); }
+.bg-black-60 { background-color: rgba( 0, 0, 0, .6 ); }
+.bg-black-50 { background-color: rgba( 0, 0, 0, .5 ); }
+.bg-black-40 { background-color: rgba( 0, 0, 0, .4 ); }
+.bg-black-30 { background-color: rgba( 0, 0, 0, .3 ); }
+.bg-black-20 { background-color: rgba( 0, 0, 0, .2 ); }
+.bg-black-10 { background-color: rgba( 0, 0, 0, .1 ); }
+.bg-black-05 { background-color: rgba( 0, 0, 0, .05 ); }
+.bg-white-90 { background-color: rgba( 255, 255, 255, .9 ); }
+.bg-white-80 { background-color: rgba( 255, 255, 255, .8 ); }
+.bg-white-70 { background-color: rgba( 255, 255, 255, .7 ); }
+.bg-white-60 { background-color: rgba( 255, 255, 255, .6 ); }
+.bg-white-50 { background-color: rgba( 255, 255, 255, .5 ); }
+.bg-white-40 { background-color: rgba( 255, 255, 255, .4 ); }
+.bg-white-30 { background-color: rgba( 255, 255, 255, .3 ); }
+.bg-white-20 { background-color: rgba( 255, 255, 255, .2 ); }
+.bg-white-10 { background-color: rgba( 255, 255, 255, .1 ); }
+.bg-black { background-color: #000; }
+.bg-white { background-color: #fff; }
+.bg-transparent { background-color: transparent; }
+.bg-white-secondary { background-color: #f8f8f8; }
+.bg-base { background-color: #232c3b; }
+.bg-base-secondary { background-color: #171e27; }
+.bg-gray { background-color: #f4f5f9; }
+.bg-gray-secondary { background-color: #e2e3e7; }
+.bg-dark-gray { background-color: #63768d; }
+.bg-dark-gray-secondary { background-color: #b0b6be; }
+.bg-blue { background-color: #4786ff; }
+.bg-blue-secondary { background-color: #386fda; }
+.bg-dark-blue { background-color: #344055; }
+.bg-dark-blue-secondary { background-color: #273040; }
+.bg-green { background-color: #59cd90; }
+.bg-green-secondary { background-color: #409b6b; }
+.bg-orange { background-color: #fd9126; }
+.bg-orange-secondary { background-color: #c97420; }
+.bg-red { background-color: #f0624d; }
+.bg-red-secondary { background-color: #c44c3a; }
+.bg-yellow { background-color: #fbc155; }
+.bg-yellow-secondary { background-color: #d2a043; }
+/* Legacy classes */
+.bg-dark-navy { background-color: #171e27; }
+.bg-navy { background-color: #232c3b; }
+.bg-light-navy { background-color: #344055; }
+.bg-light-gray { background-color: #f8f8f8; }
+.bg-tag-gray { background-color: rgba( 255, 255, 255, .9 ); }
+.bg-dark-orange { background-color: #c97420; }
+.bg-tag-orange { background-color: rgba( 255, 255, 255, .7 ); }
+.bg-tag-blue { background-color: rgba( 255, 255, 255, .7 ); }
+.bg-dark-green { background-color: #409b6b; }
+.bg-turquoise { background-color: #409b6b; }
+.bg-tag-turquoise { background-color: rgba( 255, 255, 255, .7 ); }
+.bg-dark-red { background-color: #c44c3a; }
+/* Modified by Egghead */
+/*
+
+   Tachyons
+   COLOR VARIABLES
+
+   Grayscale
+   - Solids
+   - Transparencies
+   Colors
+
+*/
+:root {/* Next iteration vars *//* Still active previous vars */ }
+/*
+
+   SKINS:PSEUDO
+
+   Customize the color of an element when
+   it is focused or hovered over.
+
+ */
+/* Hover colors */
+.hover-black:hover { color: #000; }
+.hover-black:focus { color: #000; }
+.hover-white:hover { color: #fff; }
+.hover-white:focus { color: #fff; }
+.hover-transparent:hover { color: transparent; }
+.hover-transparent:focus { color: transparent; }
+.hover-white-secondary:hover { color: #f8f8f8; }
+.hover-white-secondary:focus { color: #f8f8f8; }
+.hover-base:hover { color: #232c3b; }
+.hover-base:focus { color: #232c3b; }
+.hover-base-secondary:hover { color: #171e27; }
+.hover-base-secondary:focus { color: #171e27; }
+.hover-gray:hover { color: #f4f5f9; }
+.hover-gray:focus { color: #f4f5f9; }
+.hover-gray-secondary:hover { color: #e2e3e7; }
+.hover-gray-secondary:focus { color: #e2e3e7; }
+.hover-dark-gray:hover { color: #63768d; }
+.hover-dark-gray:focus { color: #63768d; }
+.hover-dark-gray-secondary:hover { color: #b0b6be; }
+.hover-dark-gray-secondary:focus { color: #b0b6be; }
+.hover-blue:hover { color: #4786ff; }
+.hover-blue:focus { color: #4786ff; }
+.hover-blue-secondary:hover { color: #386fda; }
+.hover-blue-secondary:focus { color: #386fda; }
+.hover-dark-blue:hover { color: #344055; }
+.hover-dark-blue:focus { color: #344055; }
+.hover-dark-blue-secondary:hover { color: #273040; }
+.hover-dark-blue-secondary:focus { color: #273040; }
+.hover-green:hover { color: #59cd90; }
+.hover-green:focus { color: #59cd90; }
+.hover-green-secondary:hover { color: #409b6b; }
+.hover-green-secondary:focus { color: #409b6b; }
+.hover-orange:hover { color: #fd9126; }
+.hover-orange:focus { color: #fd9126; }
+.hover-orange-secondary:hover { color: #c97420; }
+.hover-orange-secondary:focus { color: #c97420; }
+.hover-red:hover { color: #f0624d; }
+.hover-red:focus { color: #f0624d; }
+.hover-red-secondary:hover { color: #c44c3a; }
+.hover-red-secondary:focus { color: #c44c3a; }
+.hover-yellow:hover { color: #fbc155; }
+.hover-yellow:focus { color: #fbc155; }
+.hover-yellow-secondary:hover { color: #d2a043; }
+.hover-yellow-secondary:focus { color: #d2a043; }
+/* Legacy classes */
+.hover-dark-navy:hover { color: #171e27; }
+.hover-dark-navy:focus { color: #171e27; }
+.hover-navy:hover { color: #232c3b; }
+.hover-navy:focus { color: #232c3b; }
+.hover-light-navy:hover { color: #344055; }
+.hover-light-navy:focus { color: #344055; }
+.hover-light-gray:hover { color: #f8f8f8; }
+.hover-light-gray:focus { color: #f8f8f8; }
+.hover-tag-gray:hover { color: rgba( 255, 255, 255, .9 ); }
+.hover-tag-gray:focus { color: rgba( 255, 255, 255, .9 ); }
+.hover-dark-orange:hover { color: #c97420; }
+.hover-dark-orange:focus { color: #c97420; }
+.hover-tag-orange:hover { color: rgba( 255, 255, 255, .7 ); }
+.hover-tag-orange:focus { color: rgba( 255, 255, 255, .7 ); }
+.hover-tag-blue:hover { color: rgba( 255, 255, 255, .7 ); }
+.hover-tag-blue:focus { color: rgba( 255, 255, 255, .7 ); }
+.hover-dark-green:hover { color: #409b6b; }
+.hover-dark-green:focus { color: #409b6b; }
+.hover-turquoise:hover { color: #409b6b; }
+.hover-turquoise:focus { color: #409b6b; }
+.hover-tag-turquoise:hover { color: rgba( 255, 255, 255, .7 ); }
+.hover-tag-turquoise:focus { color: rgba( 255, 255, 255, .7 ); }
+.hover-dark-red:hover { color: #c44c3a; }
+.hover-dark-red:focus { color: #c44c3a; }
+/* Hover background-colors */
+.hover-bg-black:hover { background-color: #000; }
+.hover-bg-black:focus { background-color: #000; }
+.hover-bg-white:hover { background-color: #fff; }
+.hover-bg-white:focus { background-color: #fff; }
+.hover-bg-transparent:hover { background-color: transparent; }
+.hover-bg-transparent:focus { background-color: transparent; }
+.hover-bg-white-secondary:hover { background-color: #f8f8f8; }
+.hover-bg-white-secondary:focus { background-color: #f8f8f8; }
+.hover-bg-base:hover { background-color: #232c3b; }
+.hover-bg-base:focus { background-color: #232c3b; }
+.hover-bg-base-secondary:hover { background-color: #171e27; }
+.hover-bg-base-secondary:focus { background-color: #171e27; }
+.hover-bg-gray:hover { background-color: #f4f5f9; }
+.hover-bg-gray:focus { background-color: #f4f5f9; }
+.hover-bg-gray-secondary:hover { background-color: #e2e3e7; }
+.hover-bg-gray-secondary:focus { background-color: #e2e3e7; }
+.hover-bg-dark-gray:hover { background-color: #63768d; }
+.hover-bg-dark-gray:focus { background-color: #63768d; }
+.hover-bg-dark-gray-secondary:hover { background-color: #b0b6be; }
+.hover-bg-dark-gray-secondary:focus { background-color: #b0b6be; }
+.hover-bg-blue:hover { background-color: #4786ff; }
+.hover-bg-blue:focus { background-color: #4786ff; }
+.hover-bg-blue-secondary:hover { background-color: #386fda; }
+.hover-bg-blue-secondary:focus { background-color: #386fda; }
+.hover-bg-dark-blue:hover { background-color: #344055; }
+.hover-bg-dark-blue:focus { background-color: #344055; }
+.hover-bg-dark-blue-secondary:hover { background-color: #273040; }
+.hover-bg-dark-blue-secondary:focus { background-color: #273040; }
+.hover-bg-green:hover { background-color: #59cd90; }
+.hover-bg-green:focus { background-color: #59cd90; }
+.hover-bg-green-secondary:hover { background-color: #409b6b; }
+.hover-bg-green-secondary:focus { background-color: #409b6b; }
+.hover-bg-orange:hover { background-color: #fd9126; }
+.hover-bg-orange:focus { background-color: #fd9126; }
+.hover-bg-orange-secondary:hover { background-color: #c97420; }
+.hover-bg-orange-secondary:focus { background-color: #c97420; }
+.hover-bg-red:hover { background-color: #f0624d; }
+.hover-bg-red:focus { background-color: #f0624d; }
+.hover-bg-red-secondary:hover { background-color: #c44c3a; }
+.hover-bg-red-secondary:focus { background-color: #c44c3a; }
+.hover-bg-yellow:hover { background-color: #fbc155; }
+.hover-bg-yellow:focus { background-color: #fbc155; }
+.hover-bg-yellow-secondary:hover { background-color: #d2a043; }
+.hover-bg-yellow-secondary:focus { background-color: #d2a043; }
+/* Legacy classes */
+.hover-bg-dark-navy:hover { background-color: #171e27; }
+.hover-bg-dark-navy:focus { background-color: #171e27; }
+.hover-bg-navy:hover { background-color: #232c3b; }
+.hover-bg-navy:focus { background-color: #232c3b; }
+.hover-bg-light-navy:hover { background-color: #344055; }
+.hover-bg-light-navy:focus { background-color: #344055; }
+.hover-bg-light-gray:hover { background-color: #f8f8f8; }
+.hover-bg-light-gray:focus { background-color: #f8f8f8; }
+.hover-bg-tag-gray:hover { background-color: rgba( 255, 255, 255, .9 ); }
+.hover-bg-tag-gray:focus { background-color: rgba( 255, 255, 255, .9 ); }
+.hover-bg-dark-orange:hover { background-color: #c97420; }
+.hover-bg-dark-orange:focus { background-color: #c97420; }
+.hover-bg-tag-orange:hover { background-color: rgba( 255, 255, 255, .7 ); }
+.hover-bg-tag-orange:focus { background-color: rgba( 255, 255, 255, .7 ); }
+.hover-bg-tag-blue:hover { background-color: rgba( 255, 255, 255, .7 ); }
+.hover-bg-tag-blue:focus { background-color: rgba( 255, 255, 255, .7 ); }
+.hover-bg-dark-green:hover { background-color: #409b6b; }
+.hover-bg-dark-green:focus { background-color: #409b6b; }
+.hover-bg-turquoise:hover { background-color: #409b6b; }
+.hover-bg-turquoise:focus { background-color: #409b6b; }
+.hover-bg-tag-turquoise:hover { background-color: rgba( 255, 255, 255, .7 ); }
+.hover-bg-tag-turquoise:focus { background-color: rgba( 255, 255, 255, .7 ); }
+.hover-bg-dark-red:hover { background-color: #c44c3a; }
+.hover-bg-dark-red:focus { background-color: #c44c3a; }
+/*
+
+  BOX-SHADOW
+
+  Media Query Extensions:
+   -ns = not-small
+   -m  = medium
+   -l  = large
+
+ */
+.shadow-1 { box-shadow: 0 0 4px 0 rgba( 0, 0, 0, .2 ); }
+.shadow-2 { box-shadow: 0 0 8px 2px rgba( 0, 0, 0, .2 ); }
+.shadow-3 { box-shadow: 2px 2px 4px 2px rgba( 0, 0, 0, .2 ); }
+.shadow-4 { box-shadow: 2px 2px 8px 0 rgba( 0, 0, 0, .2 ); }
+.shadow-5 { box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .2 ); }
+/* Modified by Egghead */
+/*
+
+   Tachyons
+   COLOR VARIABLES
+
+   Grayscale
+   - Solids
+   - Transparencies
+   Colors
+
+*/
+:root {/* Next iteration vars *//* Still active previous vars */ }
+/*
+
+   BORDER COLORS
+   Docs: http://tachyons.io/docs/themes/borders/
+
+   Border colors can be used to extend the base
+   border classes ba,bt,bb,br,bl found in the _borders.css file.
+
+   The base border class by default will set the color of the border
+   to that of the current text color. These classes are for the cases
+   where you desire for the text and border colors to be different.
+
+   Base:
+     b = border
+
+   Modifiers:
+   --color-name = each color variable name is also a border color name
+
+*/
+.b--black { border-color: #000; }
+.b--white { border-color: #fff; }
+.b--white-90 { border-color: rgba( 255, 255, 255, .9 ); }
+.b--white-80 { border-color: rgba( 255, 255, 255, .8 ); }
+.b--white-70 { border-color: rgba( 255, 255, 255, .7 ); }
+.b--white-60 { border-color: rgba( 255, 255, 255, .6 ); }
+.b--white-50 { border-color: rgba( 255, 255, 255, .5 ); }
+.b--white-40 { border-color: rgba( 255, 255, 255, .4 ); }
+.b--white-30 { border-color: rgba( 255, 255, 255, .3 ); }
+.b--white-20 { border-color: rgba( 255, 255, 255, .2 ); }
+.b--white-10 { border-color: rgba( 255, 255, 255, .1 ); }
+.b--white-05 { border-color: rgba( 255, 255, 255, .05 ); }
+.b--white-025 { border-color: rgba( 255, 255, 255, .025 ); }
+.b--white-0125 { border-color: rgba( 255, 255, 255, .0125 ); }
+.b--black-90 { border-color: rgba( 0, 0, 0, .9 ); }
+.b--black-80 { border-color: rgba( 0, 0, 0, .8 ); }
+.b--black-70 { border-color: rgba( 0, 0, 0, .7 ); }
+.b--black-60 { border-color: rgba( 0, 0, 0, .6 ); }
+.b--black-50 { border-color: rgba( 0, 0, 0, .5 ); }
+.b--black-40 { border-color: rgba( 0, 0, 0, .4 ); }
+.b--black-30 { border-color: rgba( 0, 0, 0, .3 ); }
+.b--black-20 { border-color: rgba( 0, 0, 0, .2 ); }
+.b--black-10 { border-color: rgba( 0, 0, 0, .1 ); }
+.b--black-05 { border-color: rgba( 0, 0, 0, .05 ); }
+.b--black-025 { border-color: rgba( 0, 0, 0, .025 ); }
+.b--black-0125 { border-color: rgba( 0, 0, 0, .0125 ); }
+.b--transparent { border-color: transparent; }
+.b--white-secondary { border-color: #f8f8f8; }
+.b--base { border-color: #232c3b; }
+.b--base-secondary { border-color: #171e27; }
+.b--gray { border-color: #f4f5f9; }
+.b--gray-secondary { border-color: #e2e3e7; }
+.b--dark-gray { border-color: #63768d; }
+.b--dark-gray-secondary { border-color: #b0b6be; }
+.b--blue { border-color: #4786ff; }
+.b--blue-secondary { border-color: #386fda; }
+.b--dark-blue { border-color: #344055; }
+.b--dark-blue-secondary { border-color: #273040; }
+.b--green { border-color: #59cd90; }
+.b--green-secondary { border-color: #409b6b; }
+.b--orange { border-color: #fd9126; }
+.b--orange-secondary { border-color: #c97420; }
+.b--red { border-color: #f0624d; }
+.b--red-secondary { border-color: #c44c3a; }
+.b--yellow { border-color: #fbc155; }
+.b--yellow-secondary { border-color: #d2a043; }
+/* Legacy classes */
+.b--dark-navy { border-color: #171e27; }
+.b--navy { border-color: #232c3b; }
+.b--light-navy { border-color: #344055; }
+.b--light-gray { border-color: #f8f8f8; }
+.b--tag-gray { border-color: rgba( 255, 255, 255, .9 ); }
+.b--dark-orange { border-color: #c97420; }
+.b--tag-orange { border-color: rgba( 255, 255, 255, .7 ); }
+.b--tag-blue { border-color: rgba( 255, 255, 255, .7 ); }
+.b--dark-green { border-color: #409b6b; }
+.b--turquoise { border-color: #409b6b; }
+.b--tag-turquoise { border-color: rgba( 255, 255, 255, .7 ); }
+.b--dark-red { border-color: #c44c3a; }
+/* Modified by Egghead */
+/*
+
+   Tachyons
+   COLOR VARIABLES
+
+   Grayscale
+   - Solids
+   - Transparencies
+   Colors
+
+*/
+:root {/* Next iteration vars *//* Still active previous vars */ }
 /* Debugging */
-/*
-
-  DEBUG CHILDREN
-  Docs: http://tachyons.io/docs/debug/
-
-  Just add the debug class to any element to see outlines on its
-  children.
-
-*/
-.debug * { outline: 1px solid gold; }
-.debug-white * { outline: 1px solid white; }
-.debug-black * { outline: 1px solid black; }
-/*
-
-   DEBUG GRID
-   http://tachyons.io/docs/debug-grid/
-
-   Can be useful for debugging layout issues
-   or helping to make sure things line up perfectly.
-   Just tack one of these classes onto a parent element.
-
-*/
-.debug-grid { background: transparent url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAFElEQVR4AWPAC97/9x0eCsAEPgwAVLshdpENIxcAAAAASUVORK5CYII= ) repeat top left; }
-.debug-grid-16 { background: transparent url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMklEQVR4AWOgCLz/b0epAa6UGuBOqQHOQHLUgFEDnAbcBZ4UGwDOkiCnkIhdgNgNxAYAiYlD+8sEuo8AAAAASUVORK5CYII= ) repeat top left; }
-.debug-grid-8-solid { background: white url( data:image/gif;base64,R0lGODdhCAAIAPEAAADw/wDx/////wAAACwAAAAACAAIAAACDZQvgaeb/lxbAIKA8y0AOw== ) repeat top left; }
-.debug-grid-16-solid { background: white url( data:image/gif;base64,R0lGODdhEAAQAPEAAADw/wDx/xXy/////ywAAAAAEAAQAAACIZyPKckYDQFsb6ZqD85jZ2+BkwiRFKehhqQCQgDHcgwEBQA7 ) repeat top left; }
-/* Uncomment out the line below to help debug layout issues */
-/* @import './_debug'; */
-@media screen and (min-width: 30em) {
+/* @import '../node_modules/tachyons-debug'../.. */
+/* @import '../node_modules/tachyons-debug-grid'; */
+@media screen and (min-width: 40em) {
  .aspect-ratio-ns { height: 0; position: relative; }
  .aspect-ratio--16x9-ns { padding-bottom: 56.25%; }
  .aspect-ratio--9x16-ns { padding-bottom: 177.77%; }
@@ -1843,22 +1747,13 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .aspect-ratio--5x7-ns { padding-bottom: 140%; }
  .aspect-ratio--1x1-ns { padding-bottom: 100%; }
  .aspect-ratio--object-ns { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 100; }
- .cover-ns { background-size: cover !important; }
- .contain-ns { background-size: contain !important; }
  .bg-center-ns { background-repeat: no-repeat; background-position: center center; }
  .bg-top-ns { background-repeat: no-repeat; background-position: top center; }
  .bg-right-ns { background-repeat: no-repeat; background-position: center right; }
  .bg-bottom-ns { background-repeat: no-repeat; background-position: bottom center; }
  .bg-left-ns { background-repeat: no-repeat; background-position: center left; }
- .outline-ns { outline: 1px solid; }
- .outline-transparent-ns { outline: 1px solid transparent; }
- .outline-0-ns { outline: 0; }
- .ba-ns { border-style: solid; border-width: 1px; }
- .bt-ns { border-top-style: solid; border-top-width: 1px; }
- .br-ns { border-right-style: solid; border-right-width: 1px; }
- .bb-ns { border-bottom-style: solid; border-bottom-width: 1px; }
- .bl-ns { border-left-style: solid; border-left-width: 1px; }
- .bn-ns { border-style: none; border-width: 0; }
+ .cover-ns { background-size: cover; }
+ .contain-ns { background-size: contain; }
  .br0-ns { border-radius: 0; }
  .br1-ns { border-radius: .125rem; }
  .br2-ns { border-radius: .25rem; }
@@ -1884,11 +1779,16 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .br-0-ns { border-right-width: 0; }
  .bb-0-ns { border-bottom-width: 0; }
  .bl-0-ns { border-left-width: 0; }
- .shadow-1-ns { box-shadow: 0 0 4px 2px rgba( 0, 0, 0, .2 ); }
- .shadow-2-ns { box-shadow: 0 0 8px 2px rgba( 0, 0, 0, .2 ); }
- .shadow-3-ns { box-shadow: 2px 2px 4px 2px rgba( 0, 0, 0, .2 ); }
- .shadow-4-ns { box-shadow: 2px 2px 8px 0 rgba( 0, 0, 0, .2 ); }
- .shadow-5-ns { box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .2 ); }
+ .ba-ns { border-style: solid; border-width: 1px; }
+ .bt-ns { border-top-style: solid; border-top-width: 1px; }
+ .br-ns { border-right-style: solid; border-right-width: 1px; }
+ .bb-ns { border-bottom-style: solid; border-bottom-width: 1px; }
+ .bl-ns { border-left-style: solid; border-left-width: 1px; }
+ .bn-ns { border-style: none; border-width: 0; }
+ .cl-ns { clear: left; }
+ .cr-ns { clear: right; }
+ .cb-ns { clear: both; }
+ .cn-ns { clear: none; }
  .top-0-ns { top: 0; }
  .left-0-ns { left: 0; }
  .right-0-ns { right: 0; }
@@ -1910,10 +1810,6 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .bottom--2-ns { bottom: -2rem; }
  .left--2-ns { left: -2rem; }
  .absolute--fill-ns { top: 0; right: 0; bottom: 0; left: 0; }
- .cl-ns { clear: left; }
- .cr-ns { clear: right; }
- .cb-ns { clear: both; }
- .cn-ns { clear: none; }
  .dn-ns { display: none; }
  .di-ns { display: inline; }
  .db-ns { display: block; }
@@ -1926,48 +1822,6 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .dt-column-ns { display: table-column; }
  .dt-column-group-ns { display: table-column-group; }
  .dt--fixed-ns { table-layout: fixed; width: 100%; }
- .flex-ns { display: -webkit-box; display: -ms-flexbox; display: flex; }
- .inline-flex-ns { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; }
- .flex-auto-ns { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; min-width: 0; /* 1 */ min-height: 0; /* 1 */ }
- .flex-none-ns { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
- .flex-column-ns { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
- .flex-row-ns { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
- .flex-wrap-ns { -ms-flex-wrap: wrap; flex-wrap: wrap; }
- .flex-nowrap-ns { -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
- .flex-wrap-reverse-ns { -ms-flex-wrap: wrap-reverse; flex-wrap: wrap-reverse; }
- .flex-column-reverse-ns { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
- .flex-row-reverse-ns { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
- .items-start-ns { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
- .items-end-ns { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
- .items-center-ns { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
- .items-baseline-ns { -webkit-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; }
- .items-stretch-ns { -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
- .self-start-ns { -ms-flex-item-align: start; align-self: flex-start; }
- .self-end-ns { -ms-flex-item-align: end; align-self: flex-end; }
- .self-center-ns { -ms-flex-item-align: center; -ms-grid-row-align: center; align-self: center; }
- .self-baseline-ns { -ms-flex-item-align: baseline; align-self: baseline; }
- .self-stretch-ns { -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; align-self: stretch; }
- .justify-start-ns { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; }
- .justify-end-ns { -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
- .justify-center-ns { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
- .justify-between-ns { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
- .justify-around-ns { -ms-flex-pack: distribute; justify-content: space-around; }
- .content-start-ns { -ms-flex-line-pack: start; align-content: flex-start; }
- .content-end-ns { -ms-flex-line-pack: end; align-content: flex-end; }
- .content-center-ns { -ms-flex-line-pack: center; align-content: center; }
- .content-between-ns { -ms-flex-line-pack: justify; align-content: space-between; }
- .content-around-ns { -ms-flex-line-pack: distribute; align-content: space-around; }
- .content-stretch-ns { -ms-flex-line-pack: stretch; align-content: stretch; }
- .order-0-ns { -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; }
- .order-1-ns { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
- .order-2-ns { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
- .order-3-ns { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
- .order-4-ns { -webkit-box-ordinal-group: 5; -ms-flex-order: 4; order: 4; }
- .order-5-ns { -webkit-box-ordinal-group: 6; -ms-flex-order: 5; order: 5; }
- .order-6-ns { -webkit-box-ordinal-group: 7; -ms-flex-order: 6; order: 6; }
- .order-7-ns { -webkit-box-ordinal-group: 8; -ms-flex-order: 7; order: 7; }
- .order-8-ns { -webkit-box-ordinal-group: 9; -ms-flex-order: 8; order: 8; }
- .order-last-ns { -webkit-box-ordinal-group: 100000; -ms-flex-order: 99999; order: 99999; }
  .fl-ns { float: left; display: inline; }
  .fr-ns { float: right; display: inline; }
  .fn-ns { float: none; }
@@ -2018,28 +1872,58 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .mw8-ns { max-width: 64rem; }
  .mw9-ns { max-width: 96rem; }
  .mw-none-ns { max-width: none; }
- .w1-ns { width: 1rem; }
- .w2-ns { width: 2rem; }
- .w3-ns { width: 4rem; }
- .w4-ns { width: 8rem; }
- .w5-ns { width: 16rem; }
- .w-10-ns { width: 10%; }
- .w-20-ns { width: 20%; }
- .w-25-ns { width: 25%; }
- .w-30-ns { width: 30%; }
- .w-33-ns { width: 33%; }
- .w-34-ns { width: 34%; }
- .w-40-ns { width: 40%; }
- .w-50-ns { width: 50%; }
- .w-60-ns { width: 60%; }
- .w-70-ns { width: 70%; }
- .w-75-ns { width: 75%; }
- .w-80-ns { width: 80%; }
- .w-90-ns { width: 90%; }
- .w-100-ns { width: 100%; }
- .w-third-ns { width: calc( 100% / 3 ); }
- .w-two-thirds-ns { width: calc( 100% / 1.5 ); }
- .w-auto-ns { width: auto; }
+ .man1-ns { margin: -.25rem; }
+ .man2-ns { margin: -.5rem; }
+ .man3-ns { margin: -1rem; }
+ .man4-ns { margin: -2rem; }
+ .man5-ns { margin: -4rem; }
+ .man6-ns { margin: -8rem; }
+ .man7-ns { margin: -16rem; }
+ .mln1-ns { margin-left: -.25rem; }
+ .mln2-ns { margin-left: -.5rem; }
+ .mln3-ns { margin-left: -1rem; }
+ .mln4-ns { margin-left: -2rem; }
+ .mln5-ns { margin-left: -4rem; }
+ .mln6-ns { margin-left: -8rem; }
+ .mln7-ns { margin-left: -16rem; }
+ .mrn1-ns { margin-right: -.25rem; }
+ .mrn2-ns { margin-right: -.5rem; }
+ .mrn3-ns { margin-right: -1rem; }
+ .mrn4-ns { margin-right: -2rem; }
+ .mrn5-ns { margin-right: -4rem; }
+ .mrn6-ns { margin-right: -8rem; }
+ .mrn7-ns { margin-right: -16rem; }
+ .mbn1-ns { margin-bottom: -.25rem; }
+ .mbn2-ns { margin-bottom: -.5rem; }
+ .mbn3-ns { margin-bottom: -1rem; }
+ .mbn4-ns { margin-bottom: -2rem; }
+ .mbn5-ns { margin-bottom: -4rem; }
+ .mbn6-ns { margin-bottom: -8rem; }
+ .mbn7-ns { margin-bottom: -16rem; }
+ .mtn1-ns { margin-top: -.25rem; }
+ .mtn2-ns { margin-top: -.5rem; }
+ .mtn3-ns { margin-top: -1rem; }
+ .mtn4-ns { margin-top: -2rem; }
+ .mtn5-ns { margin-top: -4rem; }
+ .mtn6-ns { margin-top: -8rem; }
+ .mtn7-ns { margin-top: -16rem; }
+ .mvn1-ns { margin-top: -.25rem; margin-bottom: -.25rem; }
+ .mvn2-ns { margin-top: -.5rem; margin-bottom: -.5rem; }
+ .mvn3-ns { margin-top: -1rem; margin-bottom: -1rem; }
+ .mvn4-ns { margin-top: -2rem; margin-bottom: -2rem; }
+ .mvn5-ns { margin-top: -4rem; margin-bottom: -4rem; }
+ .mvn6-ns { margin-top: -8rem; margin-bottom: -8rem; }
+ .mvn7-ns { margin-top: -16rem; margin-bottom: -16rem; }
+ .mhn1-ns { margin-left: -.25rem; margin-right: -.25rem; }
+ .mhn2-ns { margin-left: -.5rem; margin-right: -.5rem; }
+ .mhn3-ns { margin-left: -1rem; margin-right: -1rem; }
+ .mhn4-ns { margin-left: -2rem; margin-right: -2rem; }
+ .mhn5-ns { margin-left: -4rem; margin-right: -4rem; }
+ .mhn6-ns { margin-left: -8rem; margin-right: -8rem; }
+ .mhn7-ns { margin-left: -16rem; margin-right: -16rem; }
+ .outline-ns { outline: 1px solid; }
+ .outline-transparent-ns { outline: 1px solid transparent; }
+ .outline-0-ns { outline: 0; }
  .overflow-visible-ns { overflow: visible; }
  .overflow-hidden-ns { overflow: hidden; }
  .overflow-scroll-ns { overflow: scroll; }
@@ -2175,48 +2059,12 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .mh5-ns { margin-left: 4rem; margin-right: 4rem; }
  .mh6-ns { margin-left: 8rem; margin-right: 8rem; }
  .mh7-ns { margin-left: 16rem; margin-right: 16rem; }
- .na1-ns { margin: -.25rem; }
- .na2-ns { margin: -.5rem; }
- .na3-ns { margin: -1rem; }
- .na4-ns { margin: -2rem; }
- .na5-ns { margin: -4rem; }
- .na6-ns { margin: -8rem; }
- .na7-ns { margin: -16rem; }
- .nl1-ns { margin-left: -.25rem; }
- .nl2-ns { margin-left: -.5rem; }
- .nl3-ns { margin-left: -1rem; }
- .nl4-ns { margin-left: -2rem; }
- .nl5-ns { margin-left: -4rem; }
- .nl6-ns { margin-left: -8rem; }
- .nl7-ns { margin-left: -16rem; }
- .nr1-ns { margin-right: -.25rem; }
- .nr2-ns { margin-right: -.5rem; }
- .nr3-ns { margin-right: -1rem; }
- .nr4-ns { margin-right: -2rem; }
- .nr5-ns { margin-right: -4rem; }
- .nr6-ns { margin-right: -8rem; }
- .nr7-ns { margin-right: -16rem; }
- .nb1-ns { margin-bottom: -.25rem; }
- .nb2-ns { margin-bottom: -.5rem; }
- .nb3-ns { margin-bottom: -1rem; }
- .nb4-ns { margin-bottom: -2rem; }
- .nb5-ns { margin-bottom: -4rem; }
- .nb6-ns { margin-bottom: -8rem; }
- .nb7-ns { margin-bottom: -16rem; }
- .nt1-ns { margin-top: -.25rem; }
- .nt2-ns { margin-top: -.5rem; }
- .nt3-ns { margin-top: -1rem; }
- .nt4-ns { margin-top: -2rem; }
- .nt5-ns { margin-top: -4rem; }
- .nt6-ns { margin-top: -8rem; }
- .nt7-ns { margin-top: -16rem; }
- .strike-ns { text-decoration: line-through; }
- .underline-ns { text-decoration: underline; }
- .no-underline-ns { text-decoration: none; }
  .tl-ns { text-align: left; }
  .tr-ns { text-align: right; }
  .tc-ns { text-align: center; }
- .tj-ns { text-align: justify; }
+ .strike-ns { text-decoration: line-through; }
+ .underline-ns { text-decoration: underline; }
+ .no-underline-ns { text-decoration: none; }
  .ttc-ns { text-transform: capitalize; }
  .ttl-ns { text-transform: lowercase; }
  .ttu-ns { text-transform: uppercase; }
@@ -2229,26 +2077,94 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .f4-ns { font-size: 1.25rem; }
  .f5-ns { font-size: 1rem; }
  .f6-ns { font-size: .875rem; }
- .f7-ns { font-size: .75rem; }
  .measure-ns { max-width: 30em; }
  .measure-wide-ns { max-width: 34em; }
  .measure-narrow-ns { max-width: 20em; }
  .indent-ns { text-indent: 1em; margin-top: 0; margin-bottom: 0; }
  .small-caps-ns { font-variant: small-caps; }
  .truncate-ns { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
- .center-ns { margin-right: auto; margin-left: auto; }
- .mr-auto-ns { margin-right: auto; }
- .ml-auto-ns { margin-left: auto; }
- .clip-ns { position: fixed !important; position: absolute !important; clip: rect( 1px 1px 1px 1px ); /* IE6, IE7 */ clip: rect( 1px, 1px, 1px, 1px ); }
- .ws-normal-ns { white-space: normal; }
- .nowrap-ns { white-space: nowrap; }
- .pre-ns { white-space: pre; }
  .v-base-ns { vertical-align: baseline; }
  .v-mid-ns { vertical-align: middle; }
  .v-top-ns { vertical-align: top; }
  .v-btm-ns { vertical-align: bottom; }
+ .clip-ns { position: fixed !important; position: absolute !important; clip: rect( 1px 1px 1px 1px ); /* IE6, IE7 */ clip: rect( 1px, 1px, 1px, 1px ); }
+ .ws-normal-ns { white-space: normal; }
+ .nowrap-ns { white-space: nowrap; }
+ .pre-ns { white-space: pre; }
+ .w1-ns { width: 1rem; }
+ .w2-ns { width: 2rem; }
+ .w3-ns { width: 4rem; }
+ .w4-ns { width: 8rem; }
+ .w5-ns { width: 16rem; }
+ .w-10-ns { width: 10%; }
+ .w-20-ns { width: 20%; }
+ .w-25-ns { width: 25%; }
+ .w-30-ns { width: 30%; }
+ .w-33-ns { width: 33%; }
+ .w-34-ns { width: 34%; }
+ .w-40-ns { width: 40%; }
+ .w-50-ns { width: 50%; }
+ .w-60-ns { width: 60%; }
+ .w-70-ns { width: 70%; }
+ .w-75-ns { width: 75%; }
+ .w-80-ns { width: 80%; }
+ .w-90-ns { width: 90%; }
+ .w-100-ns { width: 100%; }
+ .w-third-ns { width: calc( 100% / 3 ); }
+ .w-two-thirds-ns { width: calc( 100% / 1.5 ); }
+ .w-auto-ns { width: auto; }
+ .word-normal-ns { word-break: normal; }
+ .word-wrap-ns { word-break: break-all; }
+ .word-nowrap-ns { word-break: keep-all; }
+ .flex-ns { display: -webkit-box; display: -ms-flexbox; display: flex; }
+ .inline-flex-ns { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; }
+ .flex-auto-ns { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; min-width: 0; /* 1 */ min-height: 0; /* 1 */ }
+ .flex-none-ns { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
+ .flex-column-ns { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+ .flex-row-ns { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+ .flex-wrap-ns { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+ .items-start-ns { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
+ .items-end-ns { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
+ .items-center-ns { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+ .items-baseline-ns { -webkit-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; }
+ .items-stretch-ns { -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
+ .self-start-ns { -ms-flex-item-align: start; align-self: flex-start; }
+ .self-end-ns { -ms-flex-item-align: end; align-self: flex-end; }
+ .self-center-ns { -ms-flex-item-align: center; -ms-grid-row-align: center; align-self: center; }
+ .self-baseline-ns { -ms-flex-item-align: baseline; align-self: baseline; }
+ .self-stretch-ns { -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; align-self: stretch; }
+ .justify-start-ns { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; }
+ .justify-end-ns { -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
+ .justify-center-ns { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+ .justify-between-ns { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+ .justify-around-ns { -ms-flex-pack: distribute; justify-content: space-around; }
+ .content-start-ns { -ms-flex-line-pack: start; align-content: flex-start; }
+ .content-end-ns { -ms-flex-line-pack: end; align-content: flex-end; }
+ .content-center-ns { -ms-flex-line-pack: center; align-content: center; }
+ .content-between-ns { -ms-flex-line-pack: justify; align-content: space-between; }
+ .content-around-ns { -ms-flex-line-pack: distribute; align-content: space-around; }
+ .content-stretch-ns { -ms-flex-line-pack: stretch; align-content: stretch; }
+ .order-0-ns { -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; }
+ .order-1-ns { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
+ .order-2-ns { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
+ .order-3-ns { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
+ .order-4-ns { -webkit-box-ordinal-group: 5; -ms-flex-order: 4; order: 4; }
+ .order-5-ns { -webkit-box-ordinal-group: 6; -ms-flex-order: 5; order: 5; }
+ .order-6-ns { -webkit-box-ordinal-group: 7; -ms-flex-order: 6; order: 6; }
+ .order-7-ns { -webkit-box-ordinal-group: 8; -ms-flex-order: 7; order: 7; }
+ .order-8-ns { -webkit-box-ordinal-group: 9; -ms-flex-order: 8; order: 8; }
+ .order-last-ns { -webkit-box-ordinal-group: 100000; -ms-flex-order: 99999; order: 99999; }
+ .flex-grow-1-ns { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; }
+ .flex-grow-0-ns { -webkit-box-flex: 0; -ms-flex-positive: 0; flex-grow: 0; }
+ .flex-shrink-1-ns { -ms-flex-negative: 1; flex-shrink: 1; }
+ .flex-shrink-0-ns { -ms-flex-negative: 0; flex-shrink: 0; }
+ .shadow-1-ns { box-shadow: 0 0 4px 0 rgba( 0, 0, 0, .2 ); }
+ .shadow-2-ns { box-shadow: 0 0 8px 2px rgba( 0, 0, 0, .2 ); }
+ .shadow-3-ns { box-shadow: 2px 2px 4px 2px rgba( 0, 0, 0, .2 ); }
+ .shadow-4-ns { box-shadow: 2px 2px 8px 0 rgba( 0, 0, 0, .2 ); }
+ .shadow-5-ns { box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .2 ); }
 }
-@media screen and (min-width: 30em) and (max-width: 60em) {
+@media screen and (min-width: 40em) and (max-width: 62em) {
  .aspect-ratio-m { height: 0; position: relative; }
  .aspect-ratio--16x9-m { padding-bottom: 56.25%; }
  .aspect-ratio--9x16-m { padding-bottom: 177.77%; }
@@ -2262,22 +2178,13 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .aspect-ratio--5x7-m { padding-bottom: 140%; }
  .aspect-ratio--1x1-m { padding-bottom: 100%; }
  .aspect-ratio--object-m { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 100; }
- .cover-m { background-size: cover !important; }
- .contain-m { background-size: contain !important; }
  .bg-center-m { background-repeat: no-repeat; background-position: center center; }
  .bg-top-m { background-repeat: no-repeat; background-position: top center; }
  .bg-right-m { background-repeat: no-repeat; background-position: center right; }
  .bg-bottom-m { background-repeat: no-repeat; background-position: bottom center; }
  .bg-left-m { background-repeat: no-repeat; background-position: center left; }
- .outline-m { outline: 1px solid; }
- .outline-transparent-m { outline: 1px solid transparent; }
- .outline-0-m { outline: 0; }
- .ba-m { border-style: solid; border-width: 1px; }
- .bt-m { border-top-style: solid; border-top-width: 1px; }
- .br-m { border-right-style: solid; border-right-width: 1px; }
- .bb-m { border-bottom-style: solid; border-bottom-width: 1px; }
- .bl-m { border-left-style: solid; border-left-width: 1px; }
- .bn-m { border-style: none; border-width: 0; }
+ .cover-m { background-size: cover; }
+ .contain-m { background-size: contain; }
  .br0-m { border-radius: 0; }
  .br1-m { border-radius: .125rem; }
  .br2-m { border-radius: .25rem; }
@@ -2303,11 +2210,16 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .br-0-m { border-right-width: 0; }
  .bb-0-m { border-bottom-width: 0; }
  .bl-0-m { border-left-width: 0; }
- .shadow-1-m { box-shadow: 0 0 4px 2px rgba( 0, 0, 0, .2 ); }
- .shadow-2-m { box-shadow: 0 0 8px 2px rgba( 0, 0, 0, .2 ); }
- .shadow-3-m { box-shadow: 2px 2px 4px 2px rgba( 0, 0, 0, .2 ); }
- .shadow-4-m { box-shadow: 2px 2px 8px 0 rgba( 0, 0, 0, .2 ); }
- .shadow-5-m { box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .2 ); }
+ .ba-m { border-style: solid; border-width: 1px; }
+ .bt-m { border-top-style: solid; border-top-width: 1px; }
+ .br-m { border-right-style: solid; border-right-width: 1px; }
+ .bb-m { border-bottom-style: solid; border-bottom-width: 1px; }
+ .bl-m { border-left-style: solid; border-left-width: 1px; }
+ .bn-m { border-style: none; border-width: 0; }
+ .cl-m { clear: left; }
+ .cr-m { clear: right; }
+ .cb-m { clear: both; }
+ .cn-m { clear: none; }
  .top-0-m { top: 0; }
  .left-0-m { left: 0; }
  .right-0-m { right: 0; }
@@ -2329,10 +2241,6 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .bottom--2-m { bottom: -2rem; }
  .left--2-m { left: -2rem; }
  .absolute--fill-m { top: 0; right: 0; bottom: 0; left: 0; }
- .cl-m { clear: left; }
- .cr-m { clear: right; }
- .cb-m { clear: both; }
- .cn-m { clear: none; }
  .dn-m { display: none; }
  .di-m { display: inline; }
  .db-m { display: block; }
@@ -2345,48 +2253,6 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .dt-column-m { display: table-column; }
  .dt-column-group-m { display: table-column-group; }
  .dt--fixed-m { table-layout: fixed; width: 100%; }
- .flex-m { display: -webkit-box; display: -ms-flexbox; display: flex; }
- .inline-flex-m { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; }
- .flex-auto-m { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; min-width: 0; /* 1 */ min-height: 0; /* 1 */ }
- .flex-none-m { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
- .flex-column-m { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
- .flex-row-m { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
- .flex-wrap-m { -ms-flex-wrap: wrap; flex-wrap: wrap; }
- .flex-nowrap-m { -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
- .flex-wrap-reverse-m { -ms-flex-wrap: wrap-reverse; flex-wrap: wrap-reverse; }
- .flex-column-reverse-m { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
- .flex-row-reverse-m { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
- .items-start-m { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
- .items-end-m { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
- .items-center-m { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
- .items-baseline-m { -webkit-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; }
- .items-stretch-m { -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
- .self-start-m { -ms-flex-item-align: start; align-self: flex-start; }
- .self-end-m { -ms-flex-item-align: end; align-self: flex-end; }
- .self-center-m { -ms-flex-item-align: center; -ms-grid-row-align: center; align-self: center; }
- .self-baseline-m { -ms-flex-item-align: baseline; align-self: baseline; }
- .self-stretch-m { -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; align-self: stretch; }
- .justify-start-m { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; }
- .justify-end-m { -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
- .justify-center-m { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
- .justify-between-m { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
- .justify-around-m { -ms-flex-pack: distribute; justify-content: space-around; }
- .content-start-m { -ms-flex-line-pack: start; align-content: flex-start; }
- .content-end-m { -ms-flex-line-pack: end; align-content: flex-end; }
- .content-center-m { -ms-flex-line-pack: center; align-content: center; }
- .content-between-m { -ms-flex-line-pack: justify; align-content: space-between; }
- .content-around-m { -ms-flex-line-pack: distribute; align-content: space-around; }
- .content-stretch-m { -ms-flex-line-pack: stretch; align-content: stretch; }
- .order-0-m { -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; }
- .order-1-m { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
- .order-2-m { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
- .order-3-m { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
- .order-4-m { -webkit-box-ordinal-group: 5; -ms-flex-order: 4; order: 4; }
- .order-5-m { -webkit-box-ordinal-group: 6; -ms-flex-order: 5; order: 5; }
- .order-6-m { -webkit-box-ordinal-group: 7; -ms-flex-order: 6; order: 6; }
- .order-7-m { -webkit-box-ordinal-group: 8; -ms-flex-order: 7; order: 7; }
- .order-8-m { -webkit-box-ordinal-group: 9; -ms-flex-order: 8; order: 8; }
- .order-last-m { -webkit-box-ordinal-group: 100000; -ms-flex-order: 99999; order: 99999; }
  .fl-m { float: left; display: inline; }
  .fr-m { float: right; display: inline; }
  .fn-m { float: none; }
@@ -2412,7 +2278,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .h-50-m { height: 50%; }
  .h-75-m { height: 75%; }
  .h-100-m { height: 100%; }
- .min-h-100-m { min-height: 100%; }
+ .min-h-100-ns { min-height: 100%; }
  .vh-25-m { height: 25vh; }
  .vh-50-m { height: 50vh; }
  .vh-75-m { height: 75vh; }
@@ -2437,28 +2303,61 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .mw8-m { max-width: 64rem; }
  .mw9-m { max-width: 96rem; }
  .mw-none-m { max-width: none; }
- .w1-m { width: 1rem; }
- .w2-m { width: 2rem; }
- .w3-m { width: 4rem; }
- .w4-m { width: 8rem; }
- .w5-m { width: 16rem; }
- .w-10-m { width: 10%; }
- .w-20-m { width: 20%; }
- .w-25-m { width: 25%; }
- .w-30-m { width: 30%; }
- .w-33-m { width: 33%; }
- .w-34-m { width: 34%; }
- .w-40-m { width: 40%; }
- .w-50-m { width: 50%; }
- .w-60-m { width: 60%; }
- .w-70-m { width: 70%; }
- .w-75-m { width: 75%; }
- .w-80-m { width: 80%; }
- .w-90-m { width: 90%; }
- .w-100-m { width: 100%; }
- .w-third-m { width: calc( 100% / 3 ); }
- .w-two-thirds-m { width: calc( 100% / 1.5 ); }
- .w-auto-m { width: auto; }
+ .man1-m { margin: -.25rem; }
+ .man2-m { margin: -.5rem; }
+ .man3-m { margin: -1rem; }
+ .man4-m { margin: -2rem; }
+ .man5-m { margin: -4rem; }
+ .man6-m { margin: -8rem; }
+ .man7-m { margin: -16rem; }
+ .mln1-m { margin-left: -.25rem; }
+ .mln2-m { margin-left: -.5rem; }
+ .mln3-m { margin-left: -1rem; }
+ .mln4-m { margin-left: -2rem; }
+ .mln5-m { margin-left: -4rem; }
+ .mln6-m { margin-left: -8rem; }
+ .mln7-m { margin-left: -16rem; }
+ .mrn1-m { margin-right: -.25rem; }
+ .mrn2-m { margin-right: -.5rem; }
+ .mrn3-m { margin-right: -1rem; }
+ .mrn4-m { margin-right: -2rem; }
+ .mrn5-m { margin-right: -4rem; }
+ .mrn6-m { margin-right: -8rem; }
+ .mrn7-m { margin-right: -16rem; }
+ .mbn1-m { margin-bottom: -.25rem; }
+ .mbn2-m { margin-bottom: -.5rem; }
+ .mbn3-m { margin-bottom: -1rem; }
+ .mbn4-m { margin-bottom: -2rem; }
+ .mbn5-m { margin-bottom: -4rem; }
+ .mbn6-m { margin-bottom: -8rem; }
+ .mbn7-m { margin-bottom: -16rem; }
+ .mtn1-m { margin-top: -.25rem; }
+ .mtn2-m { margin-top: -.5rem; }
+ .mtn3-m { margin-top: -1rem; }
+ .mtn4-m { margin-top: -2rem; }
+ .mtn5-m { margin-top: -4rem; }
+ .mtn6-m { margin-top: -8rem; }
+ .mtn7-m { margin-top: -16rem; }
+ .mvn1-m { margin-top: -.25rem; margin-bottom: -.25rem; }
+ .mvn2-m { margin-top: -.5rem; margin-bottom: -.5rem; }
+ .mvn3-m { margin-top: -1rem; margin-bottom: -1rem; }
+ .mvn4-m { margin-top: -2rem; margin-bottom: -2rem; }
+ .mvn5-m { margin-top: -4rem; margin-bottom: -4rem; }
+ .mvn6-m { margin-top: -8rem; margin-bottom: -8rem; }
+ .mvn7-m { margin-top: -16rem; margin-bottom: -16rem; }
+ .mhn1-m { margin-left: -.25rem; margin-right: -.25rem; }
+ .mhn2-m { margin-left: -.5rem; margin-right: -.5rem; }
+ .mhn3-m { margin-left: -1rem; margin-right: -1rem; }
+ .mhn4-m { margin-left: -2rem; margin-right: -2rem; }
+ .mhn5-m { margin-left: -4rem; margin-right: -4rem; }
+ .mhn6-m { margin-left: -8rem; margin-right: -8rem; }
+ .mhn7-m { margin-left: -16rem; margin-right: -16rem; }
+ .outline-m { outline: 1px solid; }
+ .outline-transparent-m { outline: 1px solid transparent; }
+ .outline-0-m { outline: 0; }
+ .outline-l { outline: 1px solid; }
+ .outline-transparent-l { outline: 1px solid transparent; }
+ .outline-0-l { outline: 0; }
  .overflow-visible-m { overflow: visible; }
  .overflow-hidden-m { overflow: hidden; }
  .overflow-scroll-m { overflow: scroll; }
@@ -2594,48 +2493,12 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .mh5-m { margin-left: 4rem; margin-right: 4rem; }
  .mh6-m { margin-left: 8rem; margin-right: 8rem; }
  .mh7-m { margin-left: 16rem; margin-right: 16rem; }
- .na1-m { margin: -.25rem; }
- .na2-m { margin: -.5rem; }
- .na3-m { margin: -1rem; }
- .na4-m { margin: -2rem; }
- .na5-m { margin: -4rem; }
- .na6-m { margin: -8rem; }
- .na7-m { margin: -16rem; }
- .nl1-m { margin-left: -.25rem; }
- .nl2-m { margin-left: -.5rem; }
- .nl3-m { margin-left: -1rem; }
- .nl4-m { margin-left: -2rem; }
- .nl5-m { margin-left: -4rem; }
- .nl6-m { margin-left: -8rem; }
- .nl7-m { margin-left: -16rem; }
- .nr1-m { margin-right: -.25rem; }
- .nr2-m { margin-right: -.5rem; }
- .nr3-m { margin-right: -1rem; }
- .nr4-m { margin-right: -2rem; }
- .nr5-m { margin-right: -4rem; }
- .nr6-m { margin-right: -8rem; }
- .nr7-m { margin-right: -16rem; }
- .nb1-m { margin-bottom: -.25rem; }
- .nb2-m { margin-bottom: -.5rem; }
- .nb3-m { margin-bottom: -1rem; }
- .nb4-m { margin-bottom: -2rem; }
- .nb5-m { margin-bottom: -4rem; }
- .nb6-m { margin-bottom: -8rem; }
- .nb7-m { margin-bottom: -16rem; }
- .nt1-m { margin-top: -.25rem; }
- .nt2-m { margin-top: -.5rem; }
- .nt3-m { margin-top: -1rem; }
- .nt4-m { margin-top: -2rem; }
- .nt5-m { margin-top: -4rem; }
- .nt6-m { margin-top: -8rem; }
- .nt7-m { margin-top: -16rem; }
- .strike-m { text-decoration: line-through; }
- .underline-m { text-decoration: underline; }
- .no-underline-m { text-decoration: none; }
  .tl-m { text-align: left; }
  .tr-m { text-align: right; }
  .tc-m { text-align: center; }
- .tj-m { text-align: justify; }
+ .strike-m { text-decoration: line-through; }
+ .underline-m { text-decoration: underline; }
+ .no-underline-m { text-decoration: none; }
  .ttc-m { text-transform: capitalize; }
  .ttl-m { text-transform: lowercase; }
  .ttu-m { text-transform: uppercase; }
@@ -2648,26 +2511,94 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .f4-m { font-size: 1.25rem; }
  .f5-m { font-size: 1rem; }
  .f6-m { font-size: .875rem; }
- .f7-m { font-size: .75rem; }
  .measure-m { max-width: 30em; }
  .measure-wide-m { max-width: 34em; }
  .measure-narrow-m { max-width: 20em; }
  .indent-m { text-indent: 1em; margin-top: 0; margin-bottom: 0; }
  .small-caps-m { font-variant: small-caps; }
  .truncate-m { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
- .center-m { margin-right: auto; margin-left: auto; }
- .mr-auto-m { margin-right: auto; }
- .ml-auto-m { margin-left: auto; }
- .clip-m { position: fixed !important; position: absolute !important; clip: rect( 1px 1px 1px 1px ); /* IE6, IE7 */ clip: rect( 1px, 1px, 1px, 1px ); }
- .ws-normal-m { white-space: normal; }
- .nowrap-m { white-space: nowrap; }
- .pre-m { white-space: pre; }
  .v-base-m { vertical-align: baseline; }
  .v-mid-m { vertical-align: middle; }
  .v-top-m { vertical-align: top; }
  .v-btm-m { vertical-align: bottom; }
+ .clip-m { position: fixed !important; position: absolute !important; clip: rect( 1px 1px 1px 1px ); /* IE6, IE7 */ clip: rect( 1px, 1px, 1px, 1px ); }
+ .ws-normal-m { white-space: normal; }
+ .nowrap-m { white-space: nowrap; }
+ .pre-m { white-space: pre; }
+ .w1-m { width: 1rem; }
+ .w2-m { width: 2rem; }
+ .w3-m { width: 4rem; }
+ .w4-m { width: 8rem; }
+ .w5-m { width: 16rem; }
+ .w-10-m { width: 10%; }
+ .w-20-m { width: 20%; }
+ .w-25-m { width: 25%; }
+ .w-30-m { width: 30%; }
+ .w-33-m { width: 33%; }
+ .w-34-m { width: 34%; }
+ .w-40-m { width: 40%; }
+ .w-50-m { width: 50%; }
+ .w-60-m { width: 60%; }
+ .w-70-m { width: 70%; }
+ .w-75-m { width: 75%; }
+ .w-80-m { width: 80%; }
+ .w-90-m { width: 90%; }
+ .w-100-m { width: 100%; }
+ .w-third-m { width: calc( 100% / 3 ); }
+ .w-two-thirds-m { width: calc( 100% / 1.5 ); }
+ .w-auto-m { width: auto; }
+ .word-normal-m { word-break: normal; }
+ .word-wrap-m { word-break: break-all; }
+ .word-nowrap-m { word-break: keep-all; }
+ .flex-m { display: -webkit-box; display: -ms-flexbox; display: flex; }
+ .inline-flex-m { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; }
+ .flex-auto-m { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; min-width: 0; /* 1 */ min-height: 0; /* 1 */ }
+ .flex-none-m { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
+ .flex-column-m { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+ .flex-row-m { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+ .flex-wrap-m { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+ .items-start-m { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
+ .items-end-m { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
+ .items-center-m { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+ .items-baseline-m { -webkit-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; }
+ .items-stretch-m { -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
+ .self-start-m { -ms-flex-item-align: start; align-self: flex-start; }
+ .self-end-m { -ms-flex-item-align: end; align-self: flex-end; }
+ .self-center-m { -ms-flex-item-align: center; -ms-grid-row-align: center; align-self: center; }
+ .self-baseline-m { -ms-flex-item-align: baseline; align-self: baseline; }
+ .self-stretch-m { -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; align-self: stretch; }
+ .justify-start-m { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; }
+ .justify-end-m { -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
+ .justify-center-m { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+ .justify-between-m { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+ .justify-around-m { -ms-flex-pack: distribute; justify-content: space-around; }
+ .content-start-m { -ms-flex-line-pack: start; align-content: flex-start; }
+ .content-end-m { -ms-flex-line-pack: end; align-content: flex-end; }
+ .content-center-m { -ms-flex-line-pack: center; align-content: center; }
+ .content-between-m { -ms-flex-line-pack: justify; align-content: space-between; }
+ .content-around-m { -ms-flex-line-pack: distribute; align-content: space-around; }
+ .content-stretch-m { -ms-flex-line-pack: stretch; align-content: stretch; }
+ .order-0-m { -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; }
+ .order-1-m { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
+ .order-2-m { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
+ .order-3-m { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
+ .order-4-m { -webkit-box-ordinal-group: 5; -ms-flex-order: 4; order: 4; }
+ .order-5-m { -webkit-box-ordinal-group: 6; -ms-flex-order: 5; order: 5; }
+ .order-6-m { -webkit-box-ordinal-group: 7; -ms-flex-order: 6; order: 6; }
+ .order-7-m { -webkit-box-ordinal-group: 8; -ms-flex-order: 7; order: 7; }
+ .order-8-m { -webkit-box-ordinal-group: 9; -ms-flex-order: 8; order: 8; }
+ .order-last-m { -webkit-box-ordinal-group: 100000; -ms-flex-order: 99999; order: 99999; }
+ .flex-grow-1-m { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; }
+ .flex-grow-0-m { -webkit-box-flex: 0; -ms-flex-positive: 0; flex-grow: 0; }
+ .flex-shrink-1-m { -ms-flex-negative: 1; flex-shrink: 1; }
+ .flex-shrink-0-m { -ms-flex-negative: 0; flex-shrink: 0; }
+ .shadow-1-m { box-shadow: 0 0 4px 0 rgba( 0, 0, 0, .2 ); }
+ .shadow-2-m { box-shadow: 0 0 8px 2px rgba( 0, 0, 0, .2 ); }
+ .shadow-3-m { box-shadow: 2px 2px 4px 2px rgba( 0, 0, 0, .2 ); }
+ .shadow-4-m { box-shadow: 2px 2px 8px 0 rgba( 0, 0, 0, .2 ); }
+ .shadow-5-m { box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .2 ); }
 }
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 62em) {
  .aspect-ratio-l { height: 0; position: relative; }
  .aspect-ratio--16x9-l { padding-bottom: 56.25%; }
  .aspect-ratio--9x16-l { padding-bottom: 177.77%; }
@@ -2681,22 +2612,13 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .aspect-ratio--5x7-l { padding-bottom: 140%; }
  .aspect-ratio--1x1-l { padding-bottom: 100%; }
  .aspect-ratio--object-l { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 100; }
- .cover-l { background-size: cover !important; }
- .contain-l { background-size: contain !important; }
  .bg-center-l { background-repeat: no-repeat; background-position: center center; }
  .bg-top-l { background-repeat: no-repeat; background-position: top center; }
  .bg-right-l { background-repeat: no-repeat; background-position: center right; }
  .bg-bottom-l { background-repeat: no-repeat; background-position: bottom center; }
  .bg-left-l { background-repeat: no-repeat; background-position: center left; }
- .outline-l { outline: 1px solid; }
- .outline-transparent-l { outline: 1px solid transparent; }
- .outline-0-l { outline: 0; }
- .ba-l { border-style: solid; border-width: 1px; }
- .bt-l { border-top-style: solid; border-top-width: 1px; }
- .br-l { border-right-style: solid; border-right-width: 1px; }
- .bb-l { border-bottom-style: solid; border-bottom-width: 1px; }
- .bl-l { border-left-style: solid; border-left-width: 1px; }
- .bn-l { border-style: none; border-width: 0; }
+ .cover-l { background-size: cover; }
+ .contain-l { background-size: contain; }
  .br0-l { border-radius: 0; }
  .br1-l { border-radius: .125rem; }
  .br2-l { border-radius: .25rem; }
@@ -2722,11 +2644,16 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .br-0-l { border-right-width: 0; }
  .bb-0-l { border-bottom-width: 0; }
  .bl-0-l { border-left-width: 0; }
- .shadow-1-l { box-shadow: 0 0 4px 2px rgba( 0, 0, 0, .2 ); }
- .shadow-2-l { box-shadow: 0 0 8px 2px rgba( 0, 0, 0, .2 ); }
- .shadow-3-l { box-shadow: 2px 2px 4px 2px rgba( 0, 0, 0, .2 ); }
- .shadow-4-l { box-shadow: 2px 2px 8px 0 rgba( 0, 0, 0, .2 ); }
- .shadow-5-l { box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .2 ); }
+ .ba-l { border-style: solid; border-width: 1px; }
+ .bt-l { border-top-style: solid; border-top-width: 1px; }
+ .br-l { border-right-style: solid; border-right-width: 1px; }
+ .bb-l { border-bottom-style: solid; border-bottom-width: 1px; }
+ .bl-l { border-left-style: solid; border-left-width: 1px; }
+ .bn-l { border-style: none; border-width: 0; }
+ .cl-l { clear: left; }
+ .cr-l { clear: right; }
+ .cb-l { clear: both; }
+ .cn-l { clear: none; }
  .top-0-l { top: 0; }
  .left-0-l { left: 0; }
  .right-0-l { right: 0; }
@@ -2748,10 +2675,6 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .bottom--2-l { bottom: -2rem; }
  .left--2-l { left: -2rem; }
  .absolute--fill-l { top: 0; right: 0; bottom: 0; left: 0; }
- .cl-l { clear: left; }
- .cr-l { clear: right; }
- .cb-l { clear: both; }
- .cn-l { clear: none; }
  .dn-l { display: none; }
  .di-l { display: inline; }
  .db-l { display: block; }
@@ -2764,48 +2687,6 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .dt-column-l { display: table-column; }
  .dt-column-group-l { display: table-column-group; }
  .dt--fixed-l { table-layout: fixed; width: 100%; }
- .flex-l { display: -webkit-box; display: -ms-flexbox; display: flex; }
- .inline-flex-l { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; }
- .flex-auto-l { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; min-width: 0; /* 1 */ min-height: 0; /* 1 */ }
- .flex-none-l { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
- .flex-column-l { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
- .flex-row-l { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
- .flex-wrap-l { -ms-flex-wrap: wrap; flex-wrap: wrap; }
- .flex-nowrap-l { -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
- .flex-wrap-reverse-l { -ms-flex-wrap: wrap-reverse; flex-wrap: wrap-reverse; }
- .flex-column-reverse-l { -webkit-box-orient: vertical; -webkit-box-direction: reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
- .flex-row-reverse-l { -webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
- .items-start-l { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
- .items-end-l { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
- .items-center-l { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
- .items-baseline-l { -webkit-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; }
- .items-stretch-l { -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
- .self-start-l { -ms-flex-item-align: start; align-self: flex-start; }
- .self-end-l { -ms-flex-item-align: end; align-self: flex-end; }
- .self-center-l { -ms-flex-item-align: center; -ms-grid-row-align: center; align-self: center; }
- .self-baseline-l { -ms-flex-item-align: baseline; align-self: baseline; }
- .self-stretch-l { -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; align-self: stretch; }
- .justify-start-l { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; }
- .justify-end-l { -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
- .justify-center-l { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
- .justify-between-l { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
- .justify-around-l { -ms-flex-pack: distribute; justify-content: space-around; }
- .content-start-l { -ms-flex-line-pack: start; align-content: flex-start; }
- .content-end-l { -ms-flex-line-pack: end; align-content: flex-end; }
- .content-center-l { -ms-flex-line-pack: center; align-content: center; }
- .content-between-l { -ms-flex-line-pack: justify; align-content: space-between; }
- .content-around-l { -ms-flex-line-pack: distribute; align-content: space-around; }
- .content-stretch-l { -ms-flex-line-pack: stretch; align-content: stretch; }
- .order-0-l { -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; }
- .order-1-l { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
- .order-2-l { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
- .order-3-l { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
- .order-4-l { -webkit-box-ordinal-group: 5; -ms-flex-order: 4; order: 4; }
- .order-5-l { -webkit-box-ordinal-group: 6; -ms-flex-order: 5; order: 5; }
- .order-6-l { -webkit-box-ordinal-group: 7; -ms-flex-order: 6; order: 6; }
- .order-7-l { -webkit-box-ordinal-group: 8; -ms-flex-order: 7; order: 7; }
- .order-8-l { -webkit-box-ordinal-group: 9; -ms-flex-order: 8; order: 8; }
- .order-last-l { -webkit-box-ordinal-group: 100000; -ms-flex-order: 99999; order: 99999; }
  .fl-l { float: left; display: inline; }
  .fr-l { float: right; display: inline; }
  .fn-l { float: none; }
@@ -2836,7 +2717,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .vh-50-l { height: 50vh; }
  .vh-75-l { height: 75vh; }
  .vh-100-l { height: 100vh; }
- .min-vh-100-l { min-height: 100vh; }
+ .min-vh-100-m { min-height: 100vh; }
  .h-auto-l { height: auto; }
  .h-inherit-l { height: inherit; }
  .tracked-l { letter-spacing: .1em; }
@@ -2856,28 +2737,55 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .mw8-l { max-width: 64rem; }
  .mw9-l { max-width: 96rem; }
  .mw-none-l { max-width: none; }
- .w1-l { width: 1rem; }
- .w2-l { width: 2rem; }
- .w3-l { width: 4rem; }
- .w4-l { width: 8rem; }
- .w5-l { width: 16rem; }
- .w-10-l { width: 10%; }
- .w-20-l { width: 20%; }
- .w-25-l { width: 25%; }
- .w-30-l { width: 30%; }
- .w-33-l { width: 33%; }
- .w-34-l { width: 34%; }
- .w-40-l { width: 40%; }
- .w-50-l { width: 50%; }
- .w-60-l { width: 60%; }
- .w-70-l { width: 70%; }
- .w-75-l { width: 75%; }
- .w-80-l { width: 80%; }
- .w-90-l { width: 90%; }
- .w-100-l { width: 100%; }
- .w-third-l { width: calc( 100% / 3 ); }
- .w-two-thirds-l { width: calc( 100% / 1.5 ); }
- .w-auto-l { width: auto; }
+ .man1-l { margin: -.25rem; }
+ .man2-l { margin: -.5rem; }
+ .man3-l { margin: -1rem; }
+ .man4-l { margin: -2rem; }
+ .man5-l { margin: -4rem; }
+ .man6-l { margin: -8rem; }
+ .man7-l { margin: -16rem; }
+ .mln1-l { margin-left: -.25rem; }
+ .mln2-l { margin-left: -.5rem; }
+ .mln3-l { margin-left: -1rem; }
+ .mln4-l { margin-left: -2rem; }
+ .mln5-l { margin-left: -4rem; }
+ .mln6-l { margin-left: -8rem; }
+ .mln7-l { margin-left: -16rem; }
+ .mrn1-l { margin-right: -.25rem; }
+ .mrn2-l { margin-right: -.5rem; }
+ .mrn3-l { margin-right: -1rem; }
+ .mrn4-l { margin-right: -2rem; }
+ .mrn5-l { margin-right: -4rem; }
+ .mrn6-l { margin-right: -8rem; }
+ .mrn7-l { margin-right: -16rem; }
+ .mbn1-l { margin-bottom: -.25rem; }
+ .mbn2-l { margin-bottom: -.5rem; }
+ .mbn3-l { margin-bottom: -1rem; }
+ .mbn4-l { margin-bottom: -2rem; }
+ .mbn5-l { margin-bottom: -4rem; }
+ .mbn6-l { margin-bottom: -8rem; }
+ .mbn7-l { margin-bottom: -16rem; }
+ .mtn1-l { margin-top: -.25rem; }
+ .mtn2-l { margin-top: -.5rem; }
+ .mtn3-l { margin-top: -1rem; }
+ .mtn4-l { margin-top: -2rem; }
+ .mtn5-l { margin-top: -4rem; }
+ .mtn6-l { margin-top: -8rem; }
+ .mtn7-l { margin-top: -16rem; }
+ .mvn1-l { margin-top: -.25rem; margin-bottom: -.25rem; }
+ .mvn2-l { margin-top: -.5rem; margin-bottom: -.5rem; }
+ .mvn3-l { margin-top: -1rem; margin-bottom: -1rem; }
+ .mvn4-l { margin-top: -2rem; margin-bottom: -2rem; }
+ .mvn5-l { margin-top: -4rem; margin-bottom: -4rem; }
+ .mvn6-l { margin-top: -8rem; margin-bottom: -8rem; }
+ .mvn7-l { margin-top: -16rem; margin-bottom: -16rem; }
+ .mhn1-l { margin-left: -.25rem; margin-right: -.25rem; }
+ .mhn2-l { margin-left: -.5rem; margin-right: -.5rem; }
+ .mhn3-l { margin-left: -1rem; margin-right: -1rem; }
+ .mhn4-l { margin-left: -2rem; margin-right: -2rem; }
+ .mhn5-l { margin-left: -4rem; margin-right: -4rem; }
+ .mhn6-l { margin-left: -8rem; margin-right: -8rem; }
+ .mhn7-l { margin-left: -16rem; margin-right: -16rem; }
  .overflow-visible-l { overflow: visible; }
  .overflow-hidden-l { overflow: hidden; }
  .overflow-scroll-l { overflow: scroll; }
@@ -3013,48 +2921,12 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .mh5-l { margin-left: 4rem; margin-right: 4rem; }
  .mh6-l { margin-left: 8rem; margin-right: 8rem; }
  .mh7-l { margin-left: 16rem; margin-right: 16rem; }
- .na1-l { margin: -.25rem; }
- .na2-l { margin: -.5rem; }
- .na3-l { margin: -1rem; }
- .na4-l { margin: -2rem; }
- .na5-l { margin: -4rem; }
- .na6-l { margin: -8rem; }
- .na7-l { margin: -16rem; }
- .nl1-l { margin-left: -.25rem; }
- .nl2-l { margin-left: -.5rem; }
- .nl3-l { margin-left: -1rem; }
- .nl4-l { margin-left: -2rem; }
- .nl5-l { margin-left: -4rem; }
- .nl6-l { margin-left: -8rem; }
- .nl7-l { margin-left: -16rem; }
- .nr1-l { margin-right: -.25rem; }
- .nr2-l { margin-right: -.5rem; }
- .nr3-l { margin-right: -1rem; }
- .nr4-l { margin-right: -2rem; }
- .nr5-l { margin-right: -4rem; }
- .nr6-l { margin-right: -8rem; }
- .nr7-l { margin-right: -16rem; }
- .nb1-l { margin-bottom: -.25rem; }
- .nb2-l { margin-bottom: -.5rem; }
- .nb3-l { margin-bottom: -1rem; }
- .nb4-l { margin-bottom: -2rem; }
- .nb5-l { margin-bottom: -4rem; }
- .nb6-l { margin-bottom: -8rem; }
- .nb7-l { margin-bottom: -16rem; }
- .nt1-l { margin-top: -.25rem; }
- .nt2-l { margin-top: -.5rem; }
- .nt3-l { margin-top: -1rem; }
- .nt4-l { margin-top: -2rem; }
- .nt5-l { margin-top: -4rem; }
- .nt6-l { margin-top: -8rem; }
- .nt7-l { margin-top: -16rem; }
- .strike-l { text-decoration: line-through; }
- .underline-l { text-decoration: underline; }
- .no-underline-l { text-decoration: none; }
  .tl-l { text-align: left; }
  .tr-l { text-align: right; }
  .tc-l { text-align: center; }
- .tj-l { text-align: justify; }
+ .strike-l { text-decoration: line-through; }
+ .underline-l { text-decoration: underline; }
+ .no-underline-l { text-decoration: none; }
  .ttc-l { text-transform: capitalize; }
  .ttl-l { text-transform: lowercase; }
  .ttu-l { text-transform: uppercase; }
@@ -3067,23 +2939,91 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .f4-l { font-size: 1.25rem; }
  .f5-l { font-size: 1rem; }
  .f6-l { font-size: .875rem; }
- .f7-l { font-size: .75rem; }
  .measure-l { max-width: 30em; }
  .measure-wide-l { max-width: 34em; }
  .measure-narrow-l { max-width: 20em; }
  .indent-l { text-indent: 1em; margin-top: 0; margin-bottom: 0; }
  .small-caps-l { font-variant: small-caps; }
  .truncate-l { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
- .center-l { margin-right: auto; margin-left: auto; }
- .mr-auto-l { margin-right: auto; }
- .ml-auto-l { margin-left: auto; }
- .clip-l { position: fixed !important; position: absolute !important; clip: rect( 1px 1px 1px 1px ); /* IE6, IE7 */ clip: rect( 1px, 1px, 1px, 1px ); }
- .ws-normal-l { white-space: normal; }
- .nowrap-l { white-space: nowrap; }
- .pre-l { white-space: pre; }
  .v-base-l { vertical-align: baseline; }
  .v-mid-l { vertical-align: middle; }
  .v-top-l { vertical-align: top; }
  .v-btm-l { vertical-align: bottom; }
+ .clip-l { position: fixed !important; position: absolute !important; clip: rect( 1px 1px 1px 1px ); /* IE6, IE7 */ clip: rect( 1px, 1px, 1px, 1px ); }
+ .ws-normal-l { white-space: normal; }
+ .nowrap-l { white-space: nowrap; }
+ .pre-l { white-space: pre; }
+ .w1-l { width: 1rem; }
+ .w2-l { width: 2rem; }
+ .w3-l { width: 4rem; }
+ .w4-l { width: 8rem; }
+ .w5-l { width: 16rem; }
+ .w-10-l { width: 10%; }
+ .w-20-l { width: 20%; }
+ .w-25-l { width: 25%; }
+ .w-30-l { width: 30%; }
+ .w-33-l { width: 33%; }
+ .w-34-l { width: 34%; }
+ .w-40-l { width: 40%; }
+ .w-50-l { width: 50%; }
+ .w-60-l { width: 60%; }
+ .w-70-l { width: 70%; }
+ .w-75-l { width: 75%; }
+ .w-80-l { width: 80%; }
+ .w-90-l { width: 90%; }
+ .w-100-l { width: 100%; }
+ .w-third-l { width: calc( 100% / 3 ); }
+ .w-two-thirds-l { width: calc( 100% / 1.5 ); }
+ .w-auto-l { width: auto; }
+ .word-normal-l { word-break: normal; }
+ .word-wrap-l { word-break: break-all; }
+ .word-nowrap-l { word-break: keep-all; }
+ .flex-l { display: -webkit-box; display: -ms-flexbox; display: flex; }
+ .inline-flex-l { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; }
+ .flex-auto-l { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; min-width: 0; /* 1 */ min-height: 0; /* 1 */ }
+ .flex-none-l { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
+ .flex-column-l { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+ .flex-row-l { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+ .flex-wrap-l { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+ .items-start-l { -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
+ .items-end-l { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
+ .items-center-l { -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+ .items-baseline-l { -webkit-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; }
+ .items-stretch-l { -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; }
+ .self-start-l { -ms-flex-item-align: start; align-self: flex-start; }
+ .self-end-l { -ms-flex-item-align: end; align-self: flex-end; }
+ .self-center-l { -ms-flex-item-align: center; -ms-grid-row-align: center; align-self: center; }
+ .self-baseline-l { -ms-flex-item-align: baseline; align-self: baseline; }
+ .self-stretch-l { -ms-flex-item-align: stretch; -ms-grid-row-align: stretch; align-self: stretch; }
+ .justify-start-l { -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; }
+ .justify-end-l { -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
+ .justify-center-l { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+ .justify-between-l { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+ .justify-around-l { -ms-flex-pack: distribute; justify-content: space-around; }
+ .content-start-l { -ms-flex-line-pack: start; align-content: flex-start; }
+ .content-end-l { -ms-flex-line-pack: end; align-content: flex-end; }
+ .content-center-l { -ms-flex-line-pack: center; align-content: center; }
+ .content-between-l { -ms-flex-line-pack: justify; align-content: space-between; }
+ .content-around-l { -ms-flex-line-pack: distribute; align-content: space-around; }
+ .content-stretch-l { -ms-flex-line-pack: stretch; align-content: stretch; }
+ .order-0-l { -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; }
+ .order-1-l { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
+ .order-2-l { -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; }
+ .order-3-l { -webkit-box-ordinal-group: 4; -ms-flex-order: 3; order: 3; }
+ .order-4-l { -webkit-box-ordinal-group: 5; -ms-flex-order: 4; order: 4; }
+ .order-5-l { -webkit-box-ordinal-group: 6; -ms-flex-order: 5; order: 5; }
+ .order-6-l { -webkit-box-ordinal-group: 7; -ms-flex-order: 6; order: 6; }
+ .order-7-l { -webkit-box-ordinal-group: 8; -ms-flex-order: 7; order: 7; }
+ .order-8-l { -webkit-box-ordinal-group: 9; -ms-flex-order: 8; order: 8; }
+ .order-last-l { -webkit-box-ordinal-group: 100000; -ms-flex-order: 99999; order: 99999; }
+ .flex-grow-1-l { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; }
+ .flex-grow-0-l { -webkit-box-flex: 0; -ms-flex-positive: 0; flex-grow: 0; }
+ .flex-shrink-1-l { -ms-flex-negative: 1; flex-shrink: 1; }
+ .flex-shrink-0-l { -ms-flex-negative: 0; flex-shrink: 0; }
+ .shadow-1-l { box-shadow: 0 0 4px 0 rgba( 0, 0, 0, .2 ); }
+ .shadow-2-l { box-shadow: 0 0 8px 2px rgba( 0, 0, 0, .2 ); }
+ .shadow-3-l { box-shadow: 2px 2px 4px 2px rgba( 0, 0, 0, .2 ); }
+ .shadow-4-l { box-shadow: 2px 2px 8px 0 rgba( 0, 0, 0, .2 ); }
+ .shadow-5-l { box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .2 ); }
 }
 
